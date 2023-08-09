@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="44" viewBox="0 0 28 44">
+  <g id="Grupo_22708" data-name="Grupo 22708" transform="translate(-698 -945.566)">
+    <g id="Rectángulo_7410" data-name="Rectángulo 7410" transform="translate(698 945.566)" fill="none" stroke="#fff" stroke-width="2">
+      <rect width="28" height="44" rx="3" stroke="none"/>
+      <rect x="1" y="1" width="26" height="42" rx="2" fill="none"/>
+    </g>
+    <rect id="Rectángulo_7411" data-name="Rectángulo 7411" width="8" height="2" rx="1" transform="translate(708 980.566)" fill="#fff"/>
+    <rect id="Rectángulo_7412" data-name="Rectángulo 7412" width="13.446" height="1.692" rx="0.846" transform="translate(709.824 973.411) rotate(-80)" fill="#fff"/>
+    <circle id="Elipse_594" data-name="Elipse 594" cx="1" cy="1" r="1" transform="translate(712 951.566)" fill="#fff"/>
+    <g id="Grupo_22706" data-name="Grupo 22706" transform="translate(717.18 963.618)">
+      <line id="Línea_43" data-name="Línea 43" x2="2.633" y2="2.633" fill="none" stroke="#fafafa" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Línea_44" data-name="Línea 44" y1="2.633" x2="2.633" transform="translate(0 2.633)" fill="none" stroke="#fafafa" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+    <g id="Grupo_22707" data-name="Grupo 22707" transform="translate(704.769 963.618)">
+      <line id="Línea_43-2" data-name="Línea 43" x1="2.633" y1="2.633" transform="translate(0 2.633)" fill="none" stroke="#fafafa" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Línea_44-2" data-name="Línea 44" x1="2.633" y2="2.633" transform="translate(0)" fill="none" stroke="#fafafa" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

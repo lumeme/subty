@@ -1,0 +1,32 @@
+{
+  "name": "vulcano-test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "intl-tel-input": "^18.1.5",
+    "libphonenumber-js": "^1.10.30",
+    "maz-ui": "^3.9.0",
+    "pinia": "^2.0.35",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.5",
+    "vue": "^3.2.47",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6",
+    "vue-tel-input": "^8.1.1",
+    "vue3-tel-input": "^1.0.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "sass": "^1.62.1",
+    "sass-loader": "^10.4.1",
+    "vite": "^4.3.5"
+  }
+}
