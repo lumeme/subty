@@ -1,7 +1,7 @@
 <template>
-    <div class="col-11 d-flex justify-content-center align-items-start section portfolio background-2 padding-top px-0">
+    <div class="col-12 d-flex justify-content-center align-items-start section portfolio background-2 padding-top px-0">
         <div class="row justify-content-start w-100">
-            <div class="col-12 col-lg-3 d-flex flex-column justify-content-center justify-content-lg-start align-items-start pb-4">
+            <div class="col-12 d-flex flex-column justify-content-center justify-content-lg-start align-items-start pb-4">
                 <p class="yellow">{{ $t('message.ourProjects') }}</p>
                 <h2>{{ $t('message.portfolio') }}</h2>
             </div>
@@ -143,7 +143,7 @@ const hiddenPortfolio = () => {
 
 const setResultPorfolio = (x) => {
     filterResult.value = new Array
-    //console.log(filterResult.value)
+    console.log(filterResult.value)
     nextTick(() => {
         if(x == 'All'){
             button.value = true

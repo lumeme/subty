@@ -63,7 +63,7 @@ export const useGeneralStore = defineStore('general', () => {
     const fetchPortfolios = (async() => {
         try {
             await axios.get(url+urlPortfolio).then((result) => {
-                //console.log(result)
+                console.log(result)
                 setPortfolios.value = result.data
                 filterResult.value = result.data
             })

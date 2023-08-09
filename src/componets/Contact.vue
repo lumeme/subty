@@ -1,12 +1,12 @@
 <template>
-    <div class="col-12 col-md-9 d-flex justify-content-center align-items-start section contact pb-lg-4">
-        <div class="row justify-content-center w-100">
-            <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
+    <div class="col-12 col-md-10 d-flex justify-content-center align-items-start section contact mt-5 pb-lg-4">
+        <div class="row justify-content-center w-100 mt-5">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-end px-0 pb-4">
                 <p class="yellow">{{ $t('message.sendUSAMessage') }}</p>
                 <h2>{{ $t('message.contact') }}</h2>
             </div>
             <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-between px-0">
-              <div class="col-12 col-lg d-flex justify-content-center align-items-center d-none d-lg-flex pe-0 container-card">
+              <div class="col-12 col-lg d-flex justify-content-center align-items-center d-none d-lg-flex pe-0 container-card px-0 mx-0">
                 <div class="row justify-content-center h-100 w-100 card-grey">
                   <div class="col-12 d-flex justify-content-center align-items-center px-0">
                     <div class="row justify-content-center w-100">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-11 d-flex justify-content-end align-items-end">
+                <div class="col-12 d-flex justify-content-end align-items-end">
                     <div class="row justify-content-end w-100">
                         <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center  px-0">
                             <button type="button" value="Send" @click="sendMail()" class="see-more" id="seeMoreServicies" :disabled="disabled">
