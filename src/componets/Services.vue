@@ -1,6 +1,6 @@
 <template>
     <div class="row justify-content-center" id="services">
-        <div class="col-12 col-lg-10 d-flex justify-content-center align-items-start align-items-lg-center section services padding-lg" >
+        <div class="col-12 col-lg-9 d-flex justify-content-center align-items-start align-items-lg-center section services padding-lg" >
             <div class="row justify-content-center justify-content-lg-between w-100">
                 <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
                     <p class="yellow">{{ $t('message.servicesOffer') }}</p>

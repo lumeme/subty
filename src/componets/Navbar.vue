@@ -3,9 +3,9 @@
         <nav class="navbar fixed-top" id="navbar">
             <div class="container-fluid justify-content-center align-items-center">
                 <div class="row justify-content-center w-100">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="col-12 d-flex justify-content-center align-items-center px-lg-1">
                         <div class="row justify-content-center w-100">
-                          <div class="col-12 col-lg-1 d-flex justify-content-center align-items-center">
+                          <div class="col-12 col-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center px-0">
                             <a class="navbar-brand" href="#">
                               <img src="../../img/nav-icons/logo.png" alt="">
                             </a>

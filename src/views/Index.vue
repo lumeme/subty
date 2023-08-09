@@ -3,15 +3,15 @@
         <div id="preload-images"></div>
         <div class="row justify-content-center" id="top">
             <Navbar/>
-        <!--- CONTACT --->
-          <Contact id="contact"/>
-          <div class="col-12 col-lg-10 d-flex justify-content-center align-items-center">
+          <!--- CONTACT --->
+          <Contact id="home"/>
+          <!--- PRICING --->
+          <Pricing id="pricing"/>
+          <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center">
             <div class="row justify-content-center" id="portfolio">
               <!--- PORFOLIO --->
               <Portfolio/>
-
             </div>
-
           </div>
           <!--- SERVICES --->
           <Services/>
@@ -19,7 +19,6 @@
           <About/>
           <!--- TEAM --->
           <TeamMobile/>
-
           <!--- CONTACT --->
           <ContactEnd id="contact"/>
         </div>
@@ -57,6 +56,7 @@ import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
 import { ref } from 'vue';
 import ContactEnd from "@/componets/ContactEnd.vue";
+import Pricing from "../componets/Pricing.vue";
 
 const general = useGeneralStore();
 const {} = storeToRefs(general);

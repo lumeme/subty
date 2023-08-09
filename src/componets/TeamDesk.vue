@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-lg-10 d-flex justify-content-center align-items-start section team mt-5 d-lg-none" id="teamMobile">
+    <div class="col-12 col-lg-10 d-flex justify-content-center align-items-start section team mt-2 d-lg-none" id="teamMobile">
         <div class="row justify-content-center w-100">
             <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center px-0 padding">
                 <div class="row justify-content-center w-100">

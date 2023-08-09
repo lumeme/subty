@@ -929,7 +929,7 @@ body {
 }
 
 .portfolio .cards-portfolio:focus .info-hover, .portfolio .cards-portfolio:hover .info-hover {
-  background-color: rgba(255, 166, 0, 0.7);
+  background-color: rgba(221, 0, 0, 0.2);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1067,7 +1067,7 @@ body {
 
 .team .fix {
   position: relative;
-  top: 52px;
+  margin-top: 52px;
 }
 
 .background-3 {
@@ -1387,9 +1387,57 @@ body {
   background-color: var(--bgSelected) !important;
 }
 
+.pricing .card-grey {
+  max-height: none !important;
+}
+
+.pricing h3 {
+  font-size: 42px;
+  font-weight: 800;
+  padding-right: 5px;
+  text-transform: uppercase;
+}
+
+.pricing p {
+  color: var(--fullWhite);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.pricing button {
+  border: 2px solid transparent;
+  background-color: var(--yellow);
+  border-radius: 29px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: var(--fullWhite);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 20px 0;
+  max-width: 250px;
+}
+
+.pricing button:focus, .pricing button:hover {
+  background-color: rgba(221, 0, 0, 0.7);
+}
+
+.pricing .check {
+  height: 30px;
+  padding-right: 5px !important;
+}
+
 @media (min-width: 992px) {
   .padding-lg {
-    padding-bottom: 8vw;
+    padding-bottom: 5vw;
   }
   .padding-top {
     padding-top: 10vh;
@@ -1779,5 +1827,9 @@ footer .social a:focus .linkedin, footer .social a:hover .linkedin {
   100% {
     opacity: 0;
   }
+}
+
+.img_subty {
+  height: 200px;
 }
 /*# sourceMappingURL=styles.css.map */
