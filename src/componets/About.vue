@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-lg-10 d-flex justify-content-center align-items-start section about padding-lg" id="about">
+    <div class="col-12 col-lg-9 d-flex justify-content-center align-items-start section about padding-lg" id="about">
         <div class="row justify-content-center">
             <div class="col-12 d-flex flex-column justify-content-center align-items-start">
                 <p class="yellow">{{ $t('message.aboutUs') }}</p>
