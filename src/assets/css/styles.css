@@ -1070,6 +1070,18 @@ body {
   margin-top: 52px;
 }
 
+.team .img-fix {
+  width: 100%;
+  height: 100%;
+  width: 300px;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+}
+
 .background-3 {
   position: relative;
   background-image: url("../../../img/general-icons/background-3.svg");
@@ -1387,6 +1399,10 @@ body {
   background-color: var(--bgSelected) !important;
 }
 
+.pricing {
+  margin-bottom: 20px;
+}
+
 .pricing .card-grey {
   max-height: none !important;
 }
@@ -1433,6 +1449,10 @@ body {
 .pricing .check {
   height: 30px;
   padding-right: 5px !important;
+}
+
+.pricing .check + p {
+  padding: 10px 0;
 }
 
 @media (min-width: 992px) {

@@ -7,7 +7,6 @@ import { createI18n, useI18n } from "vue-i18n";
 import en from '../languages/en.json'
 import es from '../languages/es.json'
 
-
 export const useGeneralStore = defineStore('general', () => {
 
     const url = import.meta.env.VITE_URL
@@ -88,6 +87,9 @@ export const useGeneralStore = defineStore('general', () => {
         }
     })
     fetchServices()
+
+    
+    
 
   return { scroll, url, setPortfolios, filterResult, setServices, setLang, locale}
 })

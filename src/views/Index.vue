@@ -51,24 +51,285 @@ import TeamMobile from "../componets/TeamMobile.vue";
 import TeamDesk from "../componets/TeamDesk.vue";
 import Contact from "../componets/Contact.vue";
 import Footer from "../componets/Footer.vue";
-
-import { useGeneralStore } from "@/stores/general";
-import { storeToRefs } from "pinia";
-import { ref } from 'vue';
 import ContactEnd from "@/componets/ContactEnd.vue";
 import Pricing from "../componets/Pricing.vue";
 
+import { useGeneralStore } from "@/stores/general";
+import { storeToRefs } from "pinia";
+import { ref, provide } from 'vue';
+import { createI18n, useI18n } from "vue-i18n";
+
+import Swal from 'sweetalert2'
+
 const general = useGeneralStore();
 const {} = storeToRefs(general);
-
 const {scroll, url} = general
 
+const { t } = useI18n({ useScope: 'global' })
+
 const contact = ref({
-    phone: ''
+  name: '',
+  email: '',
+  message: ''
+})
+const phone = ref()
+const disabled = ref(false)
+
+const persoMessage = ref()
+let message = undefined
+
+const results = ref({
+  formatInternational: ""
 })
 
-//const vite_test = ref(import.meta.env.VITE_TEST)
+provide('persoMessage', persoMessage)
+provide('message', message)
+provide('contact', contact)
+provide('phone', phone)
+provide('disabled', disabled)
+provide('results', results)
 
+const updateMessage = () => {
+  if(persoMessage.value){
+    switch (persoMessage.value) {
+      case 1:
+        message = t('message.planOne')
+        contact.value.message = t('message.planOne')
+        break;
+      case 2:
+        message = t('message.planTwo')
+        contact.value.message = t('message.planTwo')
+        break;
+      case 3:
+        message = t('message.planThree')
+        contact.value.message = t('message.planThree')
+        break;
+    }
+  }
+}
+
+provide('updateMessage', updateMessage)
+
+function sendMail() {
+    disabled.value = true
+    const name = contact.value.name;
+    const email = contact.value.email;
+    const phone = results.value.formatInternational;
+    
+    console.log(message)
+    console.log(persoMessage.value)
+    if(persoMessage.value){
+        switch (persoMessage.value) {
+            case 1:
+                message = t('message.planOne')
+                contact.value.message = t('message.planOne')
+                break;
+            case 2:
+                message = t('message.planTwo')
+                contact.value.message = t('message.planTwo')
+                break;
+            case 3:
+                message = t('message.planThree')
+                contact.value.message = t('message.planThree')
+                break;
+        }
+    }else{
+        message = contact.value.message;
+    }
+    const validateEmailConst = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;   
+    const validatePhoneConst = /^\+?[\d\s-]+$/;
+    // Validación para verificar si alguno de los campos está vacío
+    const validateName = () => {
+        if (!name ) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: t('message.errorName')
+            })
+            //console.log('false')
+            return false
+        }else{
+            return true
+        }
+    }
+    const validateEmail = () => {
+        if (!email) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: t('message.errorEmail')
+            })
+            //console.log('false email')
+            return false
+        }else if (validateEmailConst.test(email) == false){
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: t('message.errorEmail2')
+            })
+            //console.log('false email')
+            return false
+        }
+        else{
+            return true
+        }
+    }
+    const validatePhone = () => {
+        if (!phone) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: t('message.errorPhone')
+            })
+            return false
+        }else if (validatePhoneConst.test(phone) == false){
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: t('message.errorPhone2')
+            })
+            return false
+        }
+        else{
+            return true
+        }
+    }
+    const validateMessage = () => {
+        if (!message ) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: t('message.errorMessage')
+            })
+            return false
+        }else{
+            return true
+        }
+    }
+    if (validateName() === true && validateEmail() == true && validatePhone() == true && validateMessage() == true) {
+        fetch(url+'/api/send_mail.php', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            })
+        })
+        .then(response => response.text())
+        .then(data => {
+            let dataParse = JSON.parse(data)
+            //console.log(JSON.parse(data));
+            //console.log(dataParse.inf.result)
+            // Aquí puedes agregar la condición para verificar si la respuesta es correcta o no
+            if (dataParse.inf.result == true) {
+                //console.log('holi')
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'success',
+                    title: t('message.success')
+                })
+            } else {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'error',
+                    title: t('message.error2')
+                })
+            }
+        })    
+        disabled.value = false
+        return
+    }else{
+        disabled.value = false
+        //console.log(phone)
+    }
+    disabled.value = false
+}
+
+provide('sendMail', sendMail)
 </script>
 
 <style lang="scss" scoped>

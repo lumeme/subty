@@ -6,7 +6,7 @@
                 <h2>{{ $t('message.contact') }}</h2>
             </div>
             <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-between px-0">
-              <div class="col-12 col-lg d-flex justify-content-center align-items-center d-none d-lg-flex pe-0 container-card px-0 mx-0">
+              <div class="col-12 col-lg d-flex justify-content-center align-items-center pe-0 container-card px-0 mx-0">
                 <div class="row justify-content-center h-100 w-100 card-grey">
                   <div class="col-12 d-flex justify-content-center align-items-center px-0">
                     <div class="row justify-content-center w-100">
@@ -20,7 +20,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                  <div class="col-12 d-flex justify-content-center align-items-center px-0 pt-4 pt-lg-0">
                     <div class="row justify-content-center w-100">
                       <div class="col-12 d-flex justify-content-center align-items-start info">
                         <img src="../../img/contact-icons/phone.png" alt="">
@@ -99,7 +99,7 @@ import MazPhoneNumberInput from 'maz-ui/components/MazPhoneNumberInput.mjs'
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
 import { createI18n, useI18n } from "vue-i18n";
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import Swal from 'sweetalert2'
 
 
@@ -108,218 +108,13 @@ const {} = storeToRefs(general);
 const {url} = general
 const { t } = useI18n({ useScope: 'global' })
 
-const contact = ref({
-    name: '',
-    email: '',
-    message: ''
-})
-
-const results = ref({
-    formatInternational: ""
-})
-const phone = ref()
-
-const disabled = ref(false)
-
-function sendMail() {
-    console.log(disabled.value, 'comienzo')
-    disabled.value = true
-    const name = contact.value.name;
-    const email = contact.value.email;
-    const phone = results.value.formatInternational;
-    const message = contact.value.message;
-    const validateEmailConst = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;   
-    const validatePhoneConst = /^\+?[\d\s-]+$/;
-    // Validación para verificar si alguno de los campos está vacío
-    const validateName = () => {
-        if (!name ) {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: t('message.errorName')
-            })
-            //console.log('false')
-            return false
-        }else{
-            return true
-        }
-    }
-    const validateEmail = () => {
-        if (!email) {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: t('message.errorEmail')
-            })
-            //console.log('false email')
-            return false
-        }else if (validateEmailConst.test(email) == false){
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: t('message.errorEmail2')
-            })
-            //console.log('false email')
-            return false
-        }
-        else{
-            return true
-        }
-    }
-    const validatePhone = () => {
-        if (!phone) {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: t('message.errorPhone')
-            })
-            return false
-        }else if (validatePhoneConst.test(phone) == false){
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: t('message.errorPhone2')
-            })
-            return false
-        }
-        else{
-            return true
-        }
-    }
-    const validateMessage = () => {
-        if (!message ) {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: t('message.errorMessage')
-            })
-            return false
-        }else{
-            return true
-        }
-    }
-    if (validateName() === true && validateEmail() == true && validatePhone() == true && validateMessage() == true) {
-        fetch(url+'/api/send_mail.php', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                phone: phone,
-                message: message
-            })
-        })
-        .then(response => response.text())
-        .then(data => {
-            let dataParse = JSON.parse(data)
-            //console.log(JSON.parse(data));
-            //console.log(dataParse.inf.result)
-            // Aquí puedes agregar la condición para verificar si la respuesta es correcta o no
-            if (dataParse.inf.result == true) {
-                //console.log('holi')
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-                Toast.fire({
-                    icon: 'success',
-                    title: t('message.success')
-                })
-            } else {
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-                Toast.fire({
-                    icon: 'error',
-                    title: t('message.error2')
-                })
-            }
-        })    
-        disabled.value = false
-        return
-    }else{
-        disabled.value = false
-        //console.log(phone)
-    }
-    disabled.value = false
-}
+const message = inject('message')
+const persoMessage = inject('persoMessage')
+const contact = inject('contact')
+const phone = inject('phone')
+const disabled = inject('disabled')
+const sendMail = inject('sendMail')
+const results = inject('results')
 // let button = document.getElementsByClassName('m-select-input__toggle-button')
 // setInterval(function(){
     
