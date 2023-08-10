@@ -17,7 +17,7 @@
                             <div class="col-12 d-flex justify-content-center align-items-center">
                                 <div class="row justify-content-center">
                                     <div class="col-3 social">
-                                        <a href="https://www.instagram.com/joaco_linares/" target="_blank">
+                                        <a href="https://www.instagram.com/naomiileana/" target="_blank">
                                             <i class="instagram"></i>
                                         </a>
                                     </div>
@@ -39,7 +39,7 @@
                             <div class="col-12 d-flex justify-content-center align-items-center">
                                 <div class="row justify-content-center">
                                     <div class="col-3 social">
-                                        <a href="https://www.instagram.com/nachomattano_/" target="_blank">
+                                        <a href="https://www.instagram.com/maggenta_/" target="_blank">
                                             <i class="instagram"></i>
                                         </a>
                                     </div>
