@@ -108,19 +108,13 @@ const {} = storeToRefs(general);
 const {url} = general
 const { t } = useI18n({ useScope: 'global' })
 
-
-
-const results = ref({
-    formatInternational: ""
-})
-
-
 const message = inject('message')
 const persoMessage = inject('persoMessage')
 const contact = inject('contact')
 const phone = inject('phone')
 const disabled = inject('disabled')
-
+const sendMail = inject('sendMail')
+const results = inject('results')
 // let button = document.getElementsByClassName('m-select-input__toggle-button')
 // setInterval(function(){
     

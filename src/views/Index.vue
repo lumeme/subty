@@ -51,13 +51,15 @@ import TeamMobile from "../componets/TeamMobile.vue";
 import TeamDesk from "../componets/TeamDesk.vue";
 import Contact from "../componets/Contact.vue";
 import Footer from "../componets/Footer.vue";
+import ContactEnd from "@/componets/ContactEnd.vue";
+import Pricing from "../componets/Pricing.vue";
 
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
 import { ref, provide } from 'vue';
 import { createI18n, useI18n } from "vue-i18n";
-import ContactEnd from "@/componets/ContactEnd.vue";
-import Pricing from "../componets/Pricing.vue";
+
+import Swal from 'sweetalert2'
 
 const general = useGeneralStore();
 const {} = storeToRefs(general);
@@ -76,11 +78,16 @@ const disabled = ref(false)
 const persoMessage = ref()
 let message = undefined
 
+const results = ref({
+  formatInternational: ""
+})
+
 provide('persoMessage', persoMessage)
 provide('message', message)
 provide('contact', contact)
 provide('phone', phone)
 provide('disabled', disabled)
+provide('results', results)
 
 const updateMessage = () => {
   if(persoMessage.value){
@@ -321,6 +328,8 @@ function sendMail() {
     }
     disabled.value = false
 }
+
+provide('sendMail', sendMail)
 </script>
 
 <style lang="scss" scoped>
