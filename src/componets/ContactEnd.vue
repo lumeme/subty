@@ -14,18 +14,7 @@
                                     <img src="../../img/contact-icons/mail.png" alt="">
                                     <div class="d-flex flex-column justify-content-center align-items-start w-100">
                                         <h3>{{ $t('message.emailUs') }}</h3>
-                                        <p>nachomattano86@gmail.com <br> joacolinares2003@gmail.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center align-items-start px-0">
-                            <div class="row justify-content-center h-100 w-100">
-                                <div class="col-12 d-flex justify-content-center align-items-start info">
-                                    <img src="../../img/contact-icons/phone.png" alt="">
-                                    <div class="d-flex flex-column justify-content-center align-items-start w-100">
-                                        <h3>{{ $t('message.callUs') }}</h3>
-                                        <p class="pb-0">+54 221 5522274 <br> +54 221 5679803</p>
+                                        <a href="mailto:info@subty.com">info@subty.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -78,27 +67,14 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg d-flex justify-content-center align-items-center d-none d-lg-flex pe-0 container-card">
-                    <div class="row justify-content-center h-100 w-100 card-grey">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <div class="row justify-content-center w-100">
+                    <div class="row justify-content-center align-items-center h-100 w-100 card-grey">
+                        <div class="col-12 d-flex justify-content-center align-items-start px-0">
+                            <div class="row justify-content-center h-100 w-100 pb-4">
                                 <div class="col-12 d-flex justify-content-center align-items-start info">
                                     <img src="../../img/contact-icons/mail.png" alt="">
                                     <div class="d-flex flex-column justify-content-center align-items-start w-100">
                                         <h3>{{ $t('message.emailUs') }}</h3>
-                                        <a href="mailto:nachomattano86@gmail.com">nachomattano86@gmail.com</a>
-                                        <a href="mailto:joacolinares2003@gmail.com">joacolinares2003@gmail.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <div class="row justify-content-center w-100">
-                                <div class="col-12 d-flex justify-content-center align-items-start info">
-                                    <img src="../../img/contact-icons/phone.png" alt="">
-                                    <div class="d-flex flex-column justify-content-center align-items-start w-100">
-                                        <h3>{{ $t('message.callUs') }}</h3>
-                                        <a href="tel:+542215522274">+54 221 5522274</a>
-                                        <a href="tel:+542215679803">+54 221 5679803</a>
+                                        <a href="mailto:info@subty.com">info@subty.com</a>
                                     </div>
                                 </div>
                             </div>

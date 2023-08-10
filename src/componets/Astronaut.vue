@@ -1,6 +1,6 @@
 <template>
     <div class="position-relative w-100 d-flex justify-content-center align-items-center">
-        <img src="../../img/about-icons/translate.png" alt="" class="img_subty">
+        <img src="../../img/about-icons/logo_subty.svg" alt="" class="img_subty" id="astronaut">
     </div>
 </template>
 
@@ -65,8 +65,8 @@
 
 }
 #astronaut{
-  animation-duration: 10s;
-  animation-name: rotateIn-desk;
+  animation-duration: 2s;
+  animation-name: slide_three-desk;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;

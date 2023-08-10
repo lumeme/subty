@@ -1531,7 +1531,6 @@ footer .social a:focus .linkedin, footer .social a:hover .linkedin {
     position: relative;
   }
   footer::before {
-    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1851,5 +1850,24 @@ footer .social a:focus .linkedin, footer .social a:hover .linkedin {
 
 .img_subty {
   height: 200px;
+}
+
+.background-one {
+  background-image: url("../../../img/general-icons/background-one.jpg");
+  background-repeat: no-repeat;
+  background-size: 178% 94%;
+  background-position-y: 120px;
+}
+
+@media (min-width: 992px) {
+  .background-one {
+    background-size: 100% 100%;
+  }
+}
+
+.form-fix {
+  padding: 15px;
+  background-color: #080005a8;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

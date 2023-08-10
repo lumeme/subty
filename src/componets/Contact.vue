@@ -5,36 +5,8 @@
                 <p class="yellow">{{ $t('message.sendUSAMessage') }}</p>
                 <h2>{{ $t('message.contact') }}</h2>
             </div>
-            <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-between px-0">
-              <div class="col-12 col-lg d-flex justify-content-center align-items-center pe-0 container-card px-0 mx-0">
-                <div class="row justify-content-center h-100 w-100 card-grey">
-                  <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                    <div class="row justify-content-center w-100">
-                      <div class="col-12 d-flex justify-content-center align-items-start info">
-                        <img src="../../img/contact-icons/mail.png" alt="">
-                        <div class="d-flex flex-column justify-content-center align-items-start w-100">
-                          <h3>{{ $t('message.emailUs') }}</h3>
-                          <a href="mailto:nachomattano86@gmail.com">nachomattano86@gmail.com</a>
-                          <a href="mailto:joacolinares2003@gmail.com">joacolinares2003@gmail.com</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 d-flex justify-content-center align-items-center px-0 pt-4 pt-lg-0">
-                    <div class="row justify-content-center w-100">
-                      <div class="col-12 d-flex justify-content-center align-items-start info">
-                        <img src="../../img/contact-icons/phone.png" alt="">
-                        <div class="d-flex flex-column justify-content-center align-items-start w-100">
-                          <h3>{{ $t('message.callUs') }}</h3>
-                          <a href="tel:+542215522274">+54 221 5522274</a>
-                          <a href="tel:+542215679803">+54 221 5679803</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center form px-lg-0">
+            <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-end px-0">
+              <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center form form-fix">
                     <div class="row justify-content-start w-100">
                         <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0">
                             <h3>{{ $t('message.yourName') }}</h3>
@@ -79,7 +51,6 @@
                         
                     </div>
                 </div>
-
                 <div class="col-12 d-flex justify-content-end align-items-end">
                     <div class="row justify-content-end w-100">
                         <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center  px-0">

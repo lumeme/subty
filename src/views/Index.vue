@@ -2,9 +2,11 @@
     <div class="container-fluid" id="home">
         <div id="preload-images"></div>
         <div class="row justify-content-center" id="top">
-            <Navbar/>
-          <!--- CONTACT --->
-          <Contact id="home"/>
+           <div class="background-one d-flex flex-column justify-content-center align-items-center">
+                <Navbar/>
+                <!--- CONTACT --->
+                <Contact id="home"/>
+           </div>
           <!--- PRICING --->
           <Pricing id="pricing"/>
           <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center">
