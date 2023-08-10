@@ -73,5 +73,8 @@
     "errorPhone2":"Error al enviar el mensaje, por favor ingrese un teléfono válido",
     "errorMessage":"Error al enviar el mensaje, por favor complete su mensaje",
     "tokenization":"Tokenization",
-    "dapps":"Dapps"
+    "dapps":"Dapps",
+    "planOne":"Hola, quiero consultar por el plan básico",
+    "planTwo":"Hola, quiero consultar por el plan intermedio",
+    "planThree":"Hola, quiero consultar por el plan premium"
 }
