@@ -1,13 +1,12 @@
 <template>
-    <div class="col-12 col-md-9 d-flex flex-column justify-content-start align-items-center section contact pb-lg-5">
+    <div class="col-12 col-md-9 d-flex flex-column justify-content-start align-items-center section contact pb-lg-5" id="pricing">
         <div class="row justify-content-center w-100 mt-5">
             <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
-                <p class="yellow">{{ $t('message.sendUSAMessage') }}</p>
                 <h2>{{ $t('message.pricing') }}</h2>
             </div>
         </div>
         <div class="row justify-content-between w-100 pt-4 pb-3">
-            <div class="col-12 col-lg d-flex justify-content-center align-items-center container-card pricing px-0 pe-lg-2">
+            <div class="col-12 col-lg d-flex justify-content-center align-items-center container-card pricing px-0 pe-lg-2 ps-lg-0 mx-0">
                 <div class="row justify-content-center h-100 w-100 card-grey">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0">
                         <div class="row justify-content-center w-100">
@@ -49,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg mx-lg-4 d-flex justify-content-center align-items-center container-card pricing px-0 ">
+            <div class="col-12 col-lg d-flex justify-content-center align-items-center container-card pricing px-0 px-lg-2 mx-0">
                 <div class="row justify-content-center h-100 w-100 card-grey">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0">
                         <div class="row justify-content-center w-100">
@@ -91,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg d-flex justify-content-center align-items-center container-card pricing px-0 ps-lg-2">
+            <div class="col-12 col-lg d-flex justify-content-center align-items-center container-card pricing px-0 px-lg-2 mx-0">
                 <div class="row justify-content-center h-100 w-100 card-grey">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0">
                         <div class="row justify-content-center w-100">
@@ -128,6 +127,42 @@
                             <div class="col-12 d-flex justify-content-start align-items-center info">
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>$100 USD/month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg d-flex justify-content-center align-items-center container-card pricing px-0 ps-lg-2 pe-lg-0 mx-0">
+                <div class="row justify-content-center h-100 w-100 card-grey">
+                    <div class="col-12 d-flex justify-content-center align-items-start px-0">
+                        <div class="row justify-content-center w-100">
+                            <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
+                                <div class="d-flex justify-content-start align-items-center w-100">
+                                    <h3>Lets <br> talk</h3>
+                                </div>
+                                <p class="pt-4">Plan personalizado</p>
+                                <p class="pb-4 mt-1">Lo mejor para ti</p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <button @click="persoMessage = 4; updateMessage(); scroll('home')">
+                                    Contact
+                                </button>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <div class="row justify-content-center w-100">
+                                    <div class="col-12 d-flex justify-content-start align-items-center info">
+                                        <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                        <p>$100 USD/month</p>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-start align-items-center info">
+                                        <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                        <p>$100 USD/month</p>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-start align-items-center info">
+                                        <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                        <p>$100 USD/month</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

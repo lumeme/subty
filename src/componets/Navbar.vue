@@ -16,6 +16,9 @@
                                         <button class="nav-link" aria-current="page" @click="scroll('home')">{{ $t('message.home') }}</button>
                                     </li>
                                     <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                        <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
+                                    </li>
+                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('about')">{{ $t('message.about') }}</button>
                                     </li>
                                     <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
@@ -75,6 +78,9 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" @click="scroll('home')" data-bs-dismiss="offcanvas">{{ $t('message.home') }}</a>
+                            </li>
+                            <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" @click="scroll('about')" data-bs-dismiss="offcanvas">{{ $t('message.about') }}</a>

@@ -45,12 +45,10 @@
 
 <script setup>
 import Navbar from "../componets/Navbar.vue";
-import Title from "../componets/Title.vue";
 import About from "../componets/About.vue";
 import Services from "../componets/Services.vue";
 import Portfolio from "../componets/Portfolio.vue";
 import TeamMobile from "../componets/TeamMobile.vue";
-import TeamDesk from "../componets/TeamDesk.vue";
 import Contact from "../componets/Contact.vue";
 import Footer from "../componets/Footer.vue";
 import ContactEnd from "@/componets/ContactEnd.vue";
@@ -134,6 +132,10 @@ function sendMail() {
                 message = t('message.planThree')
                 contact.value.message = t('message.planThree')
                 break;
+            case 4:
+                message = t('message.planFour')
+                contact.value.message = t('message.planFour')
+            break;
         }
     }else{
         message = contact.value.message;

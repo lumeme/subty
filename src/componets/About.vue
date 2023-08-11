@@ -2,7 +2,6 @@
     <div class="col-12 col-lg-9 d-flex justify-content-center align-items-start section about padding-lg" id="about">
         <div class="row justify-content-center">
             <div class="col-12 d-flex flex-column justify-content-center align-items-start">
-                <p class="yellow">{{ $t('message.aboutUs') }}</p>
                 <h2>{{ $t('message.about') }}</h2>
             </div>
             <div class="col-12 col-lg-6 d-flex flex-column justify-content-center justify-content-lg-start align-items-start ">

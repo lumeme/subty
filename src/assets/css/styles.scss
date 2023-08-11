@@ -32,10 +32,10 @@ h1, h2, h3, h4, h5, h6, p{
     --blackshadow: #00000029;
 }
 .navbar{
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: transparent;
     img{
-        height: 50px;
+        height: 70px;
         width: auto;
     }
     .navbar-toggler{
@@ -359,6 +359,7 @@ body{
         font-family: 'Muli', 'Poppins';
         font-weight: 700;
         text-align: left;
+        padding-top: 20px;
     }
     p{
         color: var(--white);
@@ -439,7 +440,7 @@ body{
         margin: 25px 0;
         @media (min-width: 992px) {
             padding: 0;
-            width: 30%;
+            width: 48%;
         }
     }
     .card-grey{
@@ -848,7 +849,6 @@ body{
     .img-fix{
         width: 100%;
         height: 100%;
-        width: 300px;
         max-height: 300px;
         object-fit: cover;
         border-radius: 15px;
@@ -922,11 +922,29 @@ body{
         text-align: left;
         text-transform: uppercase;
     }
+    .title{
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: none;
+        text-align: left;
+    }
     p, a{
         color: var(--darkGrey);
         font-size: 16px;
         font-weight: 400;
         text-align: left;
+    }
+    .subtitle{
+        font-size: 26px;
+        color: var(--white);
+        font-weight: 400;
+        text-transform: none;
+        text-align: left;
+        span{
+            color: var(--yellow);
+            font-size: 26px;
+            font-weight: 600;
+        }
     }
     .form{
         margin: 60px 0;
@@ -1154,7 +1172,7 @@ body{
 //--------- FOOTER  ----------//
 footer{
     img{
-        height: 50px;
+        height: 70px;
     }
     .copy{
         color: var(--fullWhite);
@@ -1428,4 +1446,17 @@ footer{
     padding: 15px;
     background-color: #080005a8;
     border-radius: 10px;
+}
+.contact-fix{
+    @media (min-width: 992px) {
+        padding-top: 100px;
+    }
+}
+.see-more-fix{
+    background-color: var(--bgCards);
+    border: 0;
+    &:focus, &:hover{
+        background-color: rgb(22, 14, 18);
+        color: var(--white);
+    }
 }

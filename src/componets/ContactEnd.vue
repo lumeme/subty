@@ -2,7 +2,6 @@
     <div class="col-12 col-md-9 d-flex justify-content-center align-items-start section contact pb-lg-4">
         <div class="row justify-content-center w-100">
             <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
-                <p class="yellow">{{ $t('message.sendUSAMessage') }}</p>
                 <h2>{{ $t('message.contact') }}</h2>
             </div>
           <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-between px-0">
