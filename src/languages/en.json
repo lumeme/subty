@@ -76,5 +76,7 @@
     "dapps":"Dapps",
     "planOne":"Hello, I want to ask about the basic plan",
     "planTwo":"Hello, I want to ask about the intermediate plan",
-    "planThree":"Hello, I want to ask about the premium plan"
+    "planThree":"Hello, I want to ask about the premium plan",
+    "pricing":"Pricing",
+    "basic":"Basic"
 }
