@@ -76,5 +76,7 @@
     "dapps":"Dapps",
     "planOne":"Hola, quiero consultar por el plan básico",
     "planTwo":"Hola, quiero consultar por el plan intermedio",
-    "planThree":"Hola, quiero consultar por el plan premium"
+    "planThree":"Hola, quiero consultar por el plan premium",
+    "pricing":"Pricing",
+    "basic":"Básico"
 }

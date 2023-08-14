@@ -12,7 +12,7 @@
                         <div class="row justify-content-center w-100">
                             <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                                 <div class="d-flex justify-content-start align-items-center w-100">
-                                    <h3>Basic</h3>
+                                    <h3>{{ $t('message.basic') }}</h3>
                                 </div>
                                 <p>100 minutes of video, 1 language</p>
                             </div>
