@@ -18,9 +18,9 @@
                                     <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
                                     </li>
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
-                                        <button class="nav-link" aria-current="page" @click="scroll('about')">{{ $t('message.about') }}</button>
-                                    </li>
+                                  <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <button class="nav-link" @click="scroll('portfolio')">{{ $t('message.portfolio') }}</button>
+                                  </li>
                                     <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('services')">{{ $t('message.services') }}</button>
                                     </li>
@@ -28,9 +28,9 @@
                             </div>
                             <div class="col-4 d-flex justify-content-center align-items-center d-none d-lg-flex">
                                 <ul class="navbar-nav d-flex justify-content-start align-items-center w-100">
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
-                                        <button class="nav-link" @click="scroll('portfolio')">{{ $t('message.portfolio') }}</button>
-                                    </li>
+                                  <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <button class="nav-link" aria-current="page" @click="scroll('about')">{{ $t('message.about') }}</button>
+                                  </li>
                                     <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
                                         <button class="nav-link" @click="scroll('team')">{{ $t('message.team') }}</button>
                                     </li>
@@ -82,14 +82,14 @@
                             <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
                                 <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
                             </li>
+                          <li class="nav-item">
+                            <a class="nav-link" @click="scroll('portfolio')" data-bs-dismiss="offcanvas">{{ $t('message.portfolio') }}</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" @click="scroll('services')" data-bs-dismiss="offcanvas">{{ $t('message.services') }}</a>
+                          </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" @click="scroll('about')" data-bs-dismiss="offcanvas">{{ $t('message.about') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" @click="scroll('services')" data-bs-dismiss="offcanvas">{{ $t('message.services') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" @click="scroll('portfolio')" data-bs-dismiss="offcanvas">{{ $t('message.portfolio') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" @click="scroll('team')" data-bs-dismiss="offcanvas">{{ $t('message.team') }}</a>

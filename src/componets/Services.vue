@@ -12,6 +12,7 @@
                             <p>{{ servicies.title }}</p>
                         </div>
                         <div class="col-12 info-hover">
+                            <p>{{ servicies.title }}</p>
                             <p>{{ servicies.description}}</p>
                         </div>
                     </div>
