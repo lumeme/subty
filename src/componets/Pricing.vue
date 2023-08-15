@@ -213,7 +213,7 @@
                                     <h3>Lets <br> talk</h3>
                                 </div>
                                 <p class="pt-4">{{ $t('message.letsTalk') }}</p>
-                                <p class="pb-4 mt-1">{{ $t('message.letsTalkBest') }}</p>
+                                <p class="pb-4 mt-1">{{ $t('message.letsTalkProposal') }}</p>
                             </div>
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <button @click="persoMessage = 4; updateMessage(); scroll('home')">
@@ -223,17 +223,12 @@
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <div class="row justify-content-center w-100">
                                     <div class="col-12 d-flex justify-content-start align-items-center info">
-                                        <img src="../../img/pricing-icons/check.svg" alt="" class="check">
-                                        <p>$100 USD/month</p>
+                                        <p>{{ $t('message.letsTalkText') }}</p>
                                     </div>
-                                    <div class="col-12 d-flex justify-content-start align-items-center info">
-                                        <img src="../../img/pricing-icons/check.svg" alt="" class="check">
-                                        <p>$100 USD/month</p>
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-start align-items-center info">
-                                        <img src="../../img/pricing-icons/check.svg" alt="" class="check">
-                                        <p>$100 USD/month</p>
-                                    </div>
+                                  <div class="col-12 d-flex justify-content-start align-items-center info">
+
+                                    <p>{{ $t('message.letsTalkTextTwo') }}</p>
+                                  </div>
                                 </div>
                             </div>
                         </div>

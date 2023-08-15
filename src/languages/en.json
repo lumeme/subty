@@ -37,9 +37,9 @@
     "servicesOffer":"These are the services we offer",
     "ourProjects":"Our projects",
     "us":"We",
-    "ceoOne":"Translator / Transcriptionist",
-    "ceoTwo":"Translator / Transcriptionist",
-    "ceoThree":"Translator / Transcriptionist",
+    "ceoOne":"Marketing and Sales",
+    "ceoTwo":"Translations Coordinator",
+    "ceoThree":"Multimedia and Social Manager",
     "sendUSAMessage":"Send us a message",
     "yourName":"Your Name",
     "yourEmail":"Your Email",
@@ -119,6 +119,8 @@
     "globalTextNine": "Culturally sensitive translations",
     "globalTextTen": "Unlimited changes",
     "letsTalk": "Custom Plan",
-    "letsTalkBest": "All the best for you"
+    "letsTalkProposal": "Do you have a specific need or a customized job proposal? We want to hear from you!",
+    "letsTalkText": "Whether you need a specific language combination, have special requirements, or a job proposal,",
+    "letsTalkTextTwo": "Let's talk to make it happen!!"
 
 }
