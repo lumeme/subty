@@ -212,7 +212,6 @@
                                 <div class="d-flex justify-content-start align-items-center w-100">
                                     <h3>Lets <br> talk</h3>
                                 </div>
-                                <p class="pt-4">{{ $t('message.letsTalk') }}</p>
                                 <p class="pb-4 mt-1">{{ $t('message.letsTalkProposal') }}</p>
                             </div>
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
