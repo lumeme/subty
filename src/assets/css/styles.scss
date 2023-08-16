@@ -1086,6 +1086,15 @@ body{
         background-color: var(--bgSelected) !important;
     }
 }
+.tick{
+    span{
+        color: var(--white) !important;
+        font-size: 48px !important;
+    }
+    .tick-flip{
+        min-width: 1.2em;
+    }
+}
 .pricing{
     margin-bottom: 20px;
     max-width: none !important;

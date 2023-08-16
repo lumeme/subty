@@ -9,21 +9,10 @@
                     <h3 class="title">Empresa de <br class="d-none d-xxl-flex"> subtitulado</h3>
                     <p class="subtitle">
                         Expande tu contenido a  <br>
-                        <div class="counter">
-                            <div class="cards">
-                                <div v-for="(digit, index) in digits">
-                                    <div class="card" :key="index" :id="'card'+index">
-                                    <div class="top" :class="{ flip: shouldFlip(index) }">
-                                        <div class="content">{{ getPrevDigit(index) }}</div>
-                                    </div>
-                                    <div class="bottom" :class="{ flip: shouldFlip(index) }">
-                                        <div class="content">{{ digit }}</div>
-                                    </div>
-                                    <div class="cover"></div>
-                                    </div>
-                                    <div class="separator" v-if="index % 3 === 2 && index < digits.length - 1">.</div>
-                                </div>
-                            </div>
+                        <div class="tick" data-did-init="setupFlip" ref="tick">
+                          <div data-repeat="true" aria-hidden="true">
+                            <span data-view="flip" class="flip"></span>
+                          </div>
                         </div>
                         personas
                     </p>
@@ -93,12 +82,10 @@ import MazPhoneNumberInput from 'maz-ui/components/MazPhoneNumberInput.mjs'
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
 import { createI18n, useI18n } from "vue-i18n";
-import { ref, inject, computed, onMounted, watch, reactive, nextTick} from 'vue';
+import { ref, inject, computed, onMounted, watch, reactive, nextTick, onUnmounted, watchEffect} from 'vue';
 import Swal from 'sweetalert2'
-import { Countdown } from 'vue3-flip-countdown'
-// typical import
-import {gsap} from "gsap";
-
+import Tick from "@pqina/flip";
+import "@pqina/flip/dist/flip.min.css";
 
 const general = useGeneralStore();
 const {} = storeToRefs(general);
@@ -117,153 +104,26 @@ const results = inject('results')
     
 //     button[0].dispatchEvent(new Event('click'))
 // }, 1)
-const count = ref(8345675)
-const prevCount = ref(count.value)
-
-const digits = computed(() => {
-  return count.value.toString().split('')
-})
-
-const prevDigits = computed(() => {
-  return prevCount.value.toString().split('')
-})
-
-const shouldFlip = (index) => {
-  return digits.value[index] !== prevDigits.value[index]
-}
-
-const getPrevDigit = (index) => {
-  return prevDigits.value[index] || 0
-}
+const tick = ref()
+const count = ref(8548932);
+let _tick;
 
 onMounted(() => {
-    gsap.set('.top', { rotationX: -180 });
-    gsap.set('.bottom', { rotationX: 0 });
-  setInterval(() => {
-    prevCount.value = count.value
-    count.value++
-    nextTick(() => {
-      updateAnimation()
-    });
-  }, 3000)
-})
+  _tick = Tick.DOM.create(tick.value, {
+    value: count.value,
+  });
+  console.log(_tick)
+  console.log(count.value)
 
-function updateAnimation() {
-  digits.value.forEach((digit, index) => {
-    if (shouldFlip(index)) {
-      let elTop = document.querySelector(`#card${index} .top`); // Este debería ser el número anterior
-      let elBottom = document.querySelector(`#card${index} .bottom`); // Este debería ser el número siguiente
-
-      if (elTop) {
-        gsap.to(elTop, { rotationX: 180, duration: 0.5 }); // Haz que el número anterior gire para que desaparezca
-      }
-
-      if (elBottom) {
-        gsap.fromTo(elBottom, { rotationX: -180 }, { rotationX: 0, duration: 0.5 }); // Haz que el número siguiente aparezca
-      }
-    }
-  })
-}
-
+  Tick.helper.interval(() => {
+    count.value++;
+    _tick.value = count.value;
+  }, 1000);
+  console.log(_tick.value)
+  console.log(count.value)
+});
 </script>
 
 <style lang="scss" scoped>
-@keyframes flip {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(-180deg);
-  }
-}
-
-.counter {
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-}
-
-.card {
-  position: relative;
-  width: 50px;
-  height: 70px;
-}
-
-.top,
-.bottom,
-.cover {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.top,
-.bottom {
-  height: calc(50% + 1px);
-}
-
-.top .content,
-.bottom .content,
-.cover {
-  position: absolute;
-  left: -1px;
-  right: -1px;
-}
-
-.top .content,
-.cover {
-  top: -1px;
-}
-
-.bottom .content,
-.cover {
-  bottom: -1px;
-}
-
-.top .content,
-.bottom .content {
-  background-color: black;
-  color: white;
-}
-
-.top .content,
-.bottom .content,
-.cover {
-    border-radius:10px;
-}
-
-.top .content,
-.bottom .content{
-    font-size:48px;
-    text-align:center;
-}
-
-.top,
-.bottom.flip .content{
-    transform-origin:center bottom;
-    transform-style:preserve-3d;
-    backface-visibility:hidden;
-}
-
-.bottom,
-.top.flip .content{
-    transform-origin:center top;
-    transform-style:preserve-3d;
-    backface-visibility:hidden;
-}
-.bottom{
-    transform: rotateX(-180deg);
-}
-
-.cover{
-    height:2px;
-    background-color:black;
-}
-
-/* ... tus estilos previos ... */
-
 
 </style>
