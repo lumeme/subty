@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6, p{
                 }
             }
             .exception button{
+                padding-left: 15px;
                 &:hover, &:focus{
                     color: var(--yellow);
                     &:before{
@@ -169,7 +170,26 @@ h1, h2, h3, h4, h5, h6, p{
         .navbar-nav .nav-link.show{
             color: var(--yellow);
         }
-        
+        .nav-item{
+            max-width: max-content;
+            padding: 0 10px;
+        }      
+    }
+    @media (min-width: 1024px) {
+        .exception button{
+            padding-left: 12px;
+        }
+        .nav-item{
+            padding: 0 12px;
+        }
+    }
+    @media (min-width: 1366px) {
+        .exception button{
+            padding-left: 25px;
+        }
+        .nav-item{
+            padding: 0 25px;
+        }
     }
     .dropdown-menu{
         position: absolute;
@@ -227,7 +247,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .background-color{
     background-color: var(--bgPrimary) !important;
-    animation: fade-in 0.5s ease-out forwards;
 }
 body{
     background-color: var(--bgPrimary);
@@ -473,6 +492,7 @@ body{
             min-height: 100%;
             padding: 0 20px;
             position: relative;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             overflow-y: scroll;
@@ -571,29 +591,6 @@ body{
         @media (min-width: 992px) {
             min-width: calc(100%);
         }
-        // @media (min-width: 1300px) {
-        //     min-width: calc(100% + 25vw);
-        // }
-        // @media (min-width: 1500px) {
-        //     min-width: calc(100% + 16vw);
-        // }
-        // @media (min-width: 1600px) {
-        //     min-width: calc(100% + 11vw);
-        // }
-        // @media (min-width: 1700px) {
-        //     min-width: calc(100% + 7vw);
-        // }
-        // @media (min-width: 1800px) {
-        //     min-width: calc(100% + 3vw);
-        // }
-        // @media (min-width: 1850px) {
-        //     min-width: 100%;
-        //     width: 100%;
-        //     .row_flex{
-        //         justify-content: flex-end;
-        //         align-items: center;
-        //     }
-        // }
     }
     .card-scroll{
         background-color: var(--bgCards);
@@ -716,71 +713,27 @@ body{
         }
         .info-hover{
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
-            min-height: 100%;
             width: 100%;
-            height: 100%;
+            height: 70%;
             border-radius: 15px;
             padding: 30px;
-            opacity: 0;
-            background-color:transparent;
-            transition: all 1.5s ease;
-            animation: fade-out 0.5s ease-out forwards;
-            h3, p, img, a{
-                opacity: 0;
+            opacity: 1;
+            background: linear-gradient(to bottom, transparent, #000);
+            h3{
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 400;
+                text-align: left;
+                color: var(--fullWhite);
             }
-        }
-        &:focus, &:hover{
-            .info-hover{
-                background-color:rgba(221, 0, 0, 0.2);
-                justify-content: center;
-                align-items: end;
-                animation: fade-in 0.5s ease-out forwards;
-                h3{
-                    text-transform: uppercase;
-                    font-size: 18px;
-                    font-weight: 400;
-                    text-align: left;
-                    color: var(--fullWhite);
-                }
-                p{
-                    text-transform: none;
-                    color: var(--white);
-                    text-align: left;
-                    padding-top: 15px;
-                    padding-bottom: 0;
-                }
-                img{
-                    max-height: 50px;
-                    width: auto;
-                    @media (max-width: 400px) {
-                        max-height: 40px !important;
-                    }
-                }
-                .fix{
-                    a{
-                        height: 40px;
-                        min-width: 40px;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    @media (min-width: 1400px) {
-                        a{
-                            height: 50px;
-                            min-width: 50px;
-                            img{
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                    }
-                }
-                h3, p, img, a{
-                    opacity: 1;
-                }
+            p{
+                text-transform: none;
+                color: var(--white);
+                text-align: left;
+                padding-top: 15px;
+                padding-bottom: 0;
             }
         }
     }
@@ -849,10 +802,16 @@ body{
     .img-fix{
         width: 100%;
         height: 100%;
+        min-height: 300px;
         max-height: 300px;
         object-fit: cover;
         border-radius: 15px;
         object-position: 50% 0;
+        @media (min-width: 1366px) {
+            min-height: 350px;
+            max-height: 350px;
+            object-fit: cover;
+        }
     }
 }
 .background-3{
@@ -927,6 +886,9 @@ body{
         font-weight: 700;
         text-transform: none;
         text-align: left;
+        @media (min-width: 992px) {
+            font-size: 60px;
+        }
     }
     p, a{
         color: var(--darkGrey);
@@ -945,6 +907,9 @@ body{
             font-size: 26px;
             font-weight: 600;
         }
+    }
+    .solid{
+        font-weight: 600;
     }
     .form{
         margin: 60px 0;
@@ -1120,6 +1085,7 @@ body{
 }
 .pricing{
     margin-bottom: 20px;
+    max-width: none !important;
     .card-grey{
         max-height: none !important;
     }
@@ -1128,6 +1094,14 @@ body{
         font-weight: 800;
         padding-right: 5px;
         text-transform: uppercase;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img{
+            max-height: 40px;
+            padding-right: 10px !important;
+        }
     }
     p{
         color: var(--fullWhite);
@@ -1158,6 +1132,9 @@ body{
     }
     .check + p {
         padding: 10px 0;
+    }
+    .basic-fix{
+        min-height: 11vw;
     }
 }
 @media (min-width: 992px){

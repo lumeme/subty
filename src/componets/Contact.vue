@@ -4,20 +4,31 @@
             <!-- <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
                 <h2>{{ $t('message.contact') }}</h2>
             </div> -->
-            <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-center justify-content-lg-end px-0">
-                <div class="col-12 col-lg d-flex flex-column justify-content-center justify-content-lg-start align-items-start px-0 pt-3">
-                    <h3 class="title">Empresa de subtitulado</h3>
+            <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-center  px-0">
+                <div class="col-12 col-lg-7 col-xxl-6 d-flex flex-column justify-content-center justify-content-lg-start align-items-start px-0 pt-3">
+                    <h3 class="title">Empresa de <br class="d-none d-xxl-flex"> subtitulado</h3>
                     <p class="subtitle">
-                        Expande tu contenido a 
-                        <transition name="fade">
-                            <span class="counter">
-                                <span class="digit" :key="counter">{{ formattedCount() }}</span>
-                            </span>
-                        </transition> 
+                        Expande tu contenido a  <br>
+                        <div class="counter">
+                            <div class="cards">
+                                <div v-for="(digit, index) in digits">
+                                    <div class="card" :key="index" :id="'card'+index">
+                                    <div class="top" :class="{ flip: shouldFlip(index) }">
+                                        <div class="content">{{ getPrevDigit(index) }}</div>
+                                    </div>
+                                    <div class="bottom" :class="{ flip: shouldFlip(index) }">
+                                        <div class="content">{{ digit }}</div>
+                                    </div>
+                                    <div class="cover"></div>
+                                    </div>
+                                    <div class="separator" v-if="index % 3 === 2 && index < digits.length - 1">.</div>
+                                </div>
+                            </div>
+                        </div>
                         personas
                     </p>
                 </div>
-                <div class="col-12 col-lg-5 col-xxl-4 d-flex justify-content-center align-items-center form form-fix">
+                <div class="col-12 col-lg-4 col-xxl-3 d-flex justify-content-center align-items-center form form-fix">
                     <div class="row justify-content-start w-100">
                         <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0">
                             <h3>{{ $t('message.yourName') }}</h3>
@@ -54,6 +65,7 @@
                                 fetch-country
                                 no-use-browser-locale
                             />
+                            <!--no-use-browser-locale--->
                         </div>
                         <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0">
                             <h3>{{ $t('message.message') }}</h3>
@@ -62,7 +74,7 @@
                         
                     </div>
                 </div>
-                <div class="col-12 d-flex justify-content-end align-items-end">
+                <div class="col-12 col-lg-11 col-xxl-9 d-flex justify-content-end align-items-end">
                     <div class="row justify-content-end w-100">
                         <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center  px-0">
                             <button type="button" value="Send" @click="sendMail()" class="see-more see-more-fix" id="seeMoreServicies" :disabled="disabled">
@@ -81,8 +93,11 @@ import MazPhoneNumberInput from 'maz-ui/components/MazPhoneNumberInput.mjs'
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
 import { createI18n, useI18n } from "vue-i18n";
-import { ref, inject, computed} from 'vue';
+import { ref, inject, computed, onMounted, watch, reactive, nextTick} from 'vue';
 import Swal from 'sweetalert2'
+import { Countdown } from 'vue3-flip-countdown'
+// typical import
+import {gsap} from "gsap";
 
 
 const general = useGeneralStore();
@@ -102,41 +117,153 @@ const results = inject('results')
     
 //     button[0].dispatchEvent(new Event('click'))
 // }, 1)
+const count = ref(8345675)
+const prevCount = ref(count.value)
 
-const counter = ref(3468594)
+const digits = computed(() => {
+  return count.value.toString().split('')
+})
 
-setInterval(() => {
-  counter.value++
-  formattedCount()
-}, 1000)
+const prevDigits = computed(() => {
+  return prevCount.value.toString().split('')
+})
 
-const formattedCount = () => {
-  return new Intl.NumberFormat().format(counter.value)
+const shouldFlip = (index) => {
+  return digits.value[index] !== prevDigits.value[index]
 }
+
+const getPrevDigit = (index) => {
+  return prevDigits.value[index] || 0
+}
+
+onMounted(() => {
+    gsap.set('.top', { rotationX: -180 });
+    gsap.set('.bottom', { rotationX: 0 });
+  setInterval(() => {
+    prevCount.value = count.value
+    count.value++
+    nextTick(() => {
+      updateAnimation()
+    });
+  }, 3000)
+})
+
+function updateAnimation() {
+  digits.value.forEach((digit, index) => {
+    if (shouldFlip(index)) {
+      let elTop = document.querySelector(`#card${index} .top`); // Este debería ser el número anterior
+      let elBottom = document.querySelector(`#card${index} .bottom`); // Este debería ser el número siguiente
+
+      if (elTop) {
+        gsap.to(elTop, { rotationX: 180, duration: 0.5 }); // Haz que el número anterior gire para que desaparezca
+      }
+
+      if (elBottom) {
+        gsap.fromTo(elBottom, { rotationX: -180 }, { rotationX: 0, duration: 0.5 }); // Haz que el número siguiente aparezca
+      }
+    }
+  })
+}
+
 </script>
 
 <style lang="scss" scoped>
-.counter {
-  position: relative;
-  margin: 0 5px;
-  height: 30px;
-  min-width: min-content;
-  overflow: hidden;
-}
-
-.digit {
-  position: relative;
-  top: 0;
-  left: 0;
-  animation: slide-up 0.5s ease-in-out;
-}
-
-@keyframes slide-up {
+@keyframes flip {
   from {
-    opacity: 0.5;
+    transform: rotateX(0deg);
   }
   to {
-    opacity: 1;
+    transform: rotateX(-180deg);
   }
 }
+
+.counter {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  position: relative;
+  width: 50px;
+  height: 70px;
+}
+
+.top,
+.bottom,
+.cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.top,
+.bottom {
+  height: calc(50% + 1px);
+}
+
+.top .content,
+.bottom .content,
+.cover {
+  position: absolute;
+  left: -1px;
+  right: -1px;
+}
+
+.top .content,
+.cover {
+  top: -1px;
+}
+
+.bottom .content,
+.cover {
+  bottom: -1px;
+}
+
+.top .content,
+.bottom .content {
+  background-color: black;
+  color: white;
+}
+
+.top .content,
+.bottom .content,
+.cover {
+    border-radius:10px;
+}
+
+.top .content,
+.bottom .content{
+    font-size:48px;
+    text-align:center;
+}
+
+.top,
+.bottom.flip .content{
+    transform-origin:center bottom;
+    transform-style:preserve-3d;
+    backface-visibility:hidden;
+}
+
+.bottom,
+.top.flip .content{
+    transform-origin:center top;
+    transform-style:preserve-3d;
+    backface-visibility:hidden;
+}
+.bottom{
+    transform: rotateX(-180deg);
+}
+
+.cover{
+    height:2px;
+    background-color:black;
+}
+
+/* ... tus estilos previos ... */
+
+
 </style>

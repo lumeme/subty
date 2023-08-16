@@ -69,10 +69,12 @@
                     <div class="col-12 d-flex flex-column justify-content-center align-items-center px-0 pb-4 pb-lg-0">
                         <div class="row justify-content-center h-100 w-100">
                             <div class="col-12 d-flex justify-content-center align-items-center info px-0">
-                                <img :src="portfolio.image" alt="" class="img">
+                                <a :href="portfolio.link" class="w-100" target="_blank">
+                                    <img :src="portfolio.image" alt="" class="img">
+                                </a>
                                 <div class="info-hover w-100">
                                     <div class="row justify-content-center align-items-end h-100">
-                                        <div class="col-9 d-flex flex-column justify-content-center align-items-start px-0">
+                                        <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0">
                                             <h3>{{ portfolio.name }}</h3>
                                             <div class="d-flex justify-content-start align-items-center w-100">
                                                 <p v-for="(category, id) in portfolio.categories" class="d-flex">
@@ -80,11 +82,6 @@
                                                     <span class="mx-1" :class="id >= portfolio.categories.length - 1 ? 'd-none' : 'd-flex'">-</span>
                                                 </p>
                                             </div>
-                                        </div>
-                                        <div class="col-3 d-flex justify-content-end align-items-end px-0 fix" >
-                                            <a v-for="(link, id) in portfolio.link" :href="link" class="ms-2" target="_blank">
-                                                <img src="../../img/portfolio-icons/link.svg" alt="">
-                                            </a>
                                         </div>
                                     </div>
                                 </div>

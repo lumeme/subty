@@ -94,8 +94,8 @@
                </div>
                <div class="col-12 col-lg-11 d-flex justify-content-start align-items-start">
                    <div class="row justify-content-start w-100">
-                       <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center  px-0">
-                           <button type="button" value="Send" @click="sendMail()" class="see-more" id="seeMoreServicies" :disabled="disabled">
+                       <div class="col-6 col-lg-3 d-flex justify-content-start align-items-center  px-0">
+                           <button type="button" value="Send" @click="sendMail()" class="see-more see-more-fix" id="seeMoreServicies" :disabled="disabled">
                                {{ $t('message.sendMessage') }}
                            </button>
                        </div>

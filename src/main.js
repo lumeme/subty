@@ -18,6 +18,7 @@ import 'sweetalert2/src/sweetalert2.scss'
 
 import 'animate.css';
 
+
 const app = createApp(App)
 
 const VueTelInputOptions = {

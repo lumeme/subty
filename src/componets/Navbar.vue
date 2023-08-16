@@ -3,42 +3,37 @@
         <nav class="navbar fixed-top" id="navbar">
             <div class="container-fluid justify-content-center align-items-center">
                 <div class="row justify-content-center w-100">
-                    <div class="col-12 d-flex justify-content-center align-items-center px-lg-1">
+                    <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center px-lg-1">
                         <div class="row justify-content-center w-100">
-                          <div class="col-12 col-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center px-0">
-                            <a class="navbar-brand" href="#">
-                              <img src="../../img/nav-icons/logo.png" alt="">
-                            </a>
-                          </div>
-                            <div class="col-4 d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center px-0">
+                                <a class="navbar-brand" href="#">
+                                    <img src="../../img/nav-icons/logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col d-flex justify-content-center align-items-center">
                                 <ul class="navbar-nav d-flex justify-content-end align-items-center w-100 d-none d-lg-flex">
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <li class="nav-item col  col-perso d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('home')">{{ $t('message.home') }}</button>
                                     </li>
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <li class="nav-item col   d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
                                     </li>
-                                  <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
-                                    <button class="nav-link" @click="scroll('portfolio')">{{ $t('message.portfolio') }}</button>
-                                  </li>
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <li class="nav-item col   d-flex justify-content-center align-items-center">
+                                        <button class="nav-link" @click="scroll('portfolio')">{{ $t('message.portfolio') }}</button>
+                                    </li>
+                                    <li class="nav-item col  d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('services')">{{ $t('message.services') }}</button>
                                     </li>
-                                </ul>
-                            </div>
-                            <div class="col-4 d-flex justify-content-center align-items-center d-none d-lg-flex">
-                                <ul class="navbar-nav d-flex justify-content-start align-items-center w-100">
-                                  <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
-                                    <button class="nav-link" aria-current="page" @click="scroll('about')">{{ $t('message.about') }}</button>
-                                  </li>
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <li class="nav-item col col-perso d-flex justify-content-center align-items-center">
+                                        <button class="nav-link" aria-current="page" @click="scroll('about')">{{ $t('message.about') }}</button>
+                                    </li>
+                                    <li class="nav-item col col-perso d-flex justify-content-center align-items-center">
                                         <button class="nav-link" @click="scroll('team')">{{ $t('message.team') }}</button>
                                     </li>
-                                    <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                                    <li class="nav-item col  d-flex justify-content-center align-items-center">
                                         <button class="nav-link" @click="scroll('contact')">{{ $t('message.contact') }}</button>
                                     </li>
-                                    <li class="col"></li>
-                                    <li class="nav-item col-lg-3 d-flex justify-content-center align-items-center dropdown exception">
+                                    <li class="nav-item col-1 d-flex justify-content-center align-items-center dropdown exception">
                                         <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
                                             <img src="../../img/nav-icons/language/eeuu.png" alt="" class="flag" v-if="locale == 'en'">  
                                             <img src="../../img/nav-icons/language/spain.png" alt="" class="flag" v-else>
@@ -79,7 +74,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" @click="scroll('home')" data-bs-dismiss="offcanvas">{{ $t('message.home') }}</a>
                             </li>
-                            <li class="nav-item col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                            <li class="nav-item col-lg-4  d-flex justify-content-center align-items-center">
                                 <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
                             </li>
                           <li class="nav-item">
@@ -97,7 +92,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" @click="scroll('contact')" data-bs-dismiss="offcanvas">{{ $t('message.contact') }}</a>
                             </li>
-                            <li class="nav-item col-lg-3 d-flex justify-content-center align-items-center dropdown exception">
+                            <li class="nav-item col d-flex justify-content-center align-items-center dropdown exception">
                                 <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
                                     <img src="../../img/nav-icons/language/eeuu.png" alt="" class="flag" v-if="locale == 'en'">  
                                     <img src="../../img/nav-icons/language/spain.png" alt="" class="flag" v-else>

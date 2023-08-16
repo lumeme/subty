@@ -1,10 +1,10 @@
 <template>
     <div class="col-11 col-lg-9 d-flex justify-content-center align-items-start section team padding-lg" id="team">
-        <div class="row justify-content-center w-100">
+        <div class="row justify-content-center justify-content-xxl-between w-100">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center px-0 py-2">
                 <h2> {{ $t('message.team') }}</h2>
             </div>
-            <div class="col-12 col-lg d-flex flex-column justify-content-center align-items-center align-items-lg-start px-0">
+            <div class="col-12 col-lg col-xxl-3 d-flex flex-column justify-content-center align-items-center align-items-lg-start px-0">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg mx-4 d-flex flex-column justify-content-center align-items-center align-items-lg-end px-0">
+            <div class="col-12 col-lg col-xxl-3 mx-4 d-flex flex-column justify-content-center align-items-center px-0">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg mx-4 d-flex flex-column justify-content-center align-items-center align-items-lg-end px-0">
+            <div class="col-12 col-lg col-xxl-3 d-flex flex-column justify-content-center align-items-center align-items-lg-end px-0">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">

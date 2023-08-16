@@ -209,6 +209,9 @@ h1, h2, h3, h4, h5, h6, p {
   .navbar ul li .dropdown-toggle:focus {
     outline: 0;
   }
+  .navbar ul .exception button {
+    padding-left: 15px;
+  }
   .navbar ul .exception button:hover, .navbar ul .exception button:focus {
     color: var(--yellow);
   }
@@ -217,6 +220,30 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .navbar .navbar-nav .nav-link.show {
     color: var(--yellow);
+  }
+  .navbar .nav-item {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar .exception button {
+    padding-left: 12px;
+  }
+  .navbar .nav-item {
+    padding: 0 12px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .navbar .exception button {
+    padding-left: 25px;
+  }
+  .navbar .nav-item {
+    padding: 0 25px;
   }
 }
 
@@ -284,8 +311,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .background-color {
   background-color: var(--bgPrimary) !important;
-  -webkit-animation: fade-in 0.5s ease-out forwards;
-          animation: fade-in 0.5s ease-out forwards;
 }
 
 body {
@@ -594,6 +619,10 @@ body {
   min-height: 100%;
   padding: 0 20px;
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -910,38 +939,18 @@ body {
 
 .portfolio .cards-portfolio .info-hover {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  min-height: 100%;
   width: 100%;
-  height: 100%;
+  height: 70%;
   border-radius: 15px;
   padding: 30px;
-  opacity: 0;
-  background-color: transparent;
-  -webkit-transition: all 1.5s ease;
-  transition: all 1.5s ease;
-  -webkit-animation: fade-out 0.5s ease-out forwards;
-          animation: fade-out 0.5s ease-out forwards;
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  background: linear-gradient(to bottom, transparent, #000);
 }
 
-.portfolio .cards-portfolio .info-hover h3, .portfolio .cards-portfolio .info-hover p, .portfolio .cards-portfolio .info-hover img, .portfolio .cards-portfolio .info-hover a {
-  opacity: 0;
-}
-
-.portfolio .cards-portfolio:focus .info-hover, .portfolio .cards-portfolio:hover .info-hover {
-  background-color: rgba(221, 0, 0, 0.2);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  -webkit-animation: fade-in 0.5s ease-out forwards;
-          animation: fade-in 0.5s ease-out forwards;
-}
-
-.portfolio .cards-portfolio:focus .info-hover h3, .portfolio .cards-portfolio:hover .info-hover h3 {
+.portfolio .cards-portfolio .info-hover h3 {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 400;
@@ -949,48 +958,12 @@ body {
   color: var(--fullWhite);
 }
 
-.portfolio .cards-portfolio:focus .info-hover p, .portfolio .cards-portfolio:hover .info-hover p {
+.portfolio .cards-portfolio .info-hover p {
   text-transform: none;
   color: var(--white);
   text-align: left;
   padding-top: 15px;
   padding-bottom: 0;
-}
-
-.portfolio .cards-portfolio:focus .info-hover img, .portfolio .cards-portfolio:hover .info-hover img {
-  max-height: 50px;
-  width: auto;
-}
-
-@media (max-width: 400px) {
-  .portfolio .cards-portfolio:focus .info-hover img, .portfolio .cards-portfolio:hover .info-hover img {
-    max-height: 40px !important;
-  }
-}
-
-.portfolio .cards-portfolio:focus .info-hover .fix a, .portfolio .cards-portfolio:hover .info-hover .fix a {
-  height: 40px;
-  min-width: 40px;
-}
-
-.portfolio .cards-portfolio:focus .info-hover .fix a img, .portfolio .cards-portfolio:hover .info-hover .fix a img {
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-width: 1400px) {
-  .portfolio .cards-portfolio:focus .info-hover .fix a, .portfolio .cards-portfolio:hover .info-hover .fix a {
-    height: 50px;
-    min-width: 50px;
-  }
-  .portfolio .cards-portfolio:focus .info-hover .fix a img, .portfolio .cards-portfolio:hover .info-hover .fix a img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.portfolio .cards-portfolio:focus .info-hover h3, .portfolio .cards-portfolio:focus .info-hover p, .portfolio .cards-portfolio:focus .info-hover img, .portfolio .cards-portfolio:focus .info-hover a, .portfolio .cards-portfolio:hover .info-hover h3, .portfolio .cards-portfolio:hover .info-hover p, .portfolio .cards-portfolio:hover .info-hover img, .portfolio .cards-portfolio:hover .info-hover a {
-  opacity: 1;
 }
 
 .team .large-text {
@@ -1074,12 +1047,22 @@ body {
 .team .img-fix {
   width: 100%;
   height: 100%;
+  min-height: 300px;
   max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
   -o-object-position: 50% 0;
      object-position: 50% 0;
+}
+
+@media (min-width: 1366px) {
+  .team .img-fix {
+    min-height: 350px;
+    max-height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .background-3 {
@@ -1177,6 +1160,12 @@ body {
   text-align: left;
 }
 
+@media (min-width: 992px) {
+  .contact .title {
+    font-size: 60px;
+  }
+}
+
 .contact p, .contact a {
   color: var(--darkGrey);
   font-size: 16px;
@@ -1195,6 +1184,10 @@ body {
 .contact .subtitle span {
   color: var(--yellow);
   font-size: 26px;
+  font-weight: 600;
+}
+
+.contact .solid {
   font-weight: 600;
 }
 
@@ -1422,6 +1415,7 @@ body {
 
 .pricing {
   margin-bottom: 20px;
+  max-width: none !important;
 }
 
 .pricing .card-grey {
@@ -1433,6 +1427,21 @@ body {
   font-weight: 800;
   padding-right: 5px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.pricing h3 img {
+  max-height: 40px;
+  padding-right: 10px !important;
 }
 
 .pricing p {
@@ -1474,6 +1483,10 @@ body {
 
 .pricing .check + p {
   padding: 10px 0;
+}
+
+.pricing .basic-fix {
+  min-height: 11vw;
 }
 
 @media (min-width: 992px) {

@@ -104,6 +104,10 @@ const updateMessage = () => {
         message = t('message.planThree')
         contact.value.message = t('message.planThree')
         break;
+      case 4:
+        message = t('message.planFour')
+        contact.value.message = t('message.planFour')
+        break;
     }
   }
 }
