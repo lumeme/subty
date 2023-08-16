@@ -105,7 +105,7 @@ const results = inject('results')
 //     button[0].dispatchEvent(new Event('click'))
 // }, 1)
 const tick = ref()
-const count = ref(8548932);
+const count = ref(8548932456);
 let _tick;
 
 onMounted(() => {

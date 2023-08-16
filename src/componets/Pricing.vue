@@ -20,8 +20,7 @@
                         </div>
                         <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                           <div class="d-flex justify-content-start align-items-center w-100">
-                            <h3>$1</h3>
-                            <p>USD/Min.</p>
+                            <h3>$1<p>USD/Min.</p></h3>
                           </div>
                           <p>{{ $t('message.basicMonth') }}</p>
                         </div>
@@ -78,8 +77,7 @@
                   </div>
                   <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                     <div class="d-flex justify-content-start align-items-center w-100">
-                      <h3>$0.33</h3>
-                      <p>USD/Min.</p>
+                      <h3>$0.33 <p>USD/Min.</p></h3>
                     </div>
                     <p>{{ $t('message.expansionMonth') }}</p>
                   </div>
@@ -146,13 +144,13 @@
                       <h3>
                         <img src="../../img/about-icons/world.svg" alt="">
                         {{ $t('message.global') }}</h3>
+                        
                     </div>
                     <p>{{ $t('message.globalLenguage') }}</p>
                   </div>
                   <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                     <div class="d-flex justify-content-start align-items-center w-100">
-                      <h3>$0</h3>
-                      <p>USD/Min.</p>
+                      <h3>$0<p>USD/Min.</p></h3>
                     </div>
                     <p>{{ $t('message.globalMonth') }}</p>
                   </div>
@@ -219,7 +217,7 @@
                                     <img src="../../img/about-icons/people.svg" alt="">
                                   Lets talk</h3>
                               </div>
-                              <p class="pb-4 mt-1">{{ $t('message.letsTalkProposal') }}</p>
+                              <p class="py-4 mt-5 pt-lg-5 mt-lg-1">{{ $t('message.letsTalkProposal') }}</p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                               <button @click="persoMessage = 4; updateMessage(); scroll('home')">
