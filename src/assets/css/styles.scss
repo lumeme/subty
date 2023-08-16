@@ -807,6 +807,9 @@ body{
         object-fit: cover;
         border-radius: 15px;
         object-position: 50% 0;
+        @media (max-width: 992px) {
+            max-width: 320px;
+        }
         @media (min-width: 1366px) {
             min-height: 350px;
             max-height: 350px;

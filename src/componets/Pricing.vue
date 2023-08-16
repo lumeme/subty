@@ -13,7 +13,7 @@
                         <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                           <div class="d-flex justify-content-start align-items-center w-100">
                             <h3>
-                              <img src="" alt="">
+                              <img src="../../img/about-icons/dialog-white-one.png" alt="">
                               {{ $t('message.basic') }}</h3>
                           </div>
                           <p>{{ $t('message.basicLenguage') }}</p>
