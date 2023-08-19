@@ -78,18 +78,17 @@
                                 </div>
                             </div>
                         </div>
-                      <!---<div class="col-12 d-flex justify-content-center align-items-center px-0">
+                      <div class="col-12 d-flex justify-content-center align-items-center px-0">
                            <div class="row justify-content-center w-100">
                                <div class="col-12 d-flex justify-content-center align-items-start info">
                                    <img src="../../img/contact-icons/phone.png" alt="">
                                    <div class="d-flex flex-column justify-content-center align-items-start w-100">
                                        <h3>{{ $t('message.callUs') }}</h3>
-                                       <a href="tel:+542215522274">+54 221 5522274</a>
-                                       <a href="tel:+542215679803">+54 221 5679803</a>
+                                       <a href="tel:+541151807976">+54 1151807976</a>
                                    </div>
                                </div>
                            </div>
-                       </div>--->
+                       </div>
                    </div>
                </div>
                <div class="col-12 col-lg-11 d-flex justify-content-start align-items-start">

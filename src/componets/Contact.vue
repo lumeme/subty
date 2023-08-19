@@ -6,15 +6,15 @@
             </div> -->
             <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-center  px-0">
                 <div class="col-12 col-lg-7 col-xxl-6 d-flex flex-column justify-content-center justify-content-lg-start align-items-start px-0 pt-3">
-                    <h3 class="title">Empresa de <br class="d-none d-xxl-flex"> subtitulado</h3>
+                    <h3 class="title">{{ $t('message.companyOf') }}<br class="d-none d-xxl-flex">{{ $t('message.subtitling') }}</h3>
                     <p class="subtitle">
-                        Expande tu contenido a  <br>
+                      {{ $t('message.expand') }}<br>
                         <div class="tick" data-did-init="setupFlip" ref="tick">
                           <div data-repeat="true" aria-hidden="true">
                             <span data-view="flip" class="flip"></span>
                           </div>
                         </div>
-                        personas
+                      {{ $t('message.people') }}
                     </p>
                 </div>
                 <div class="col-12 col-lg-4 col-xxl-3 d-flex justify-content-center align-items-center form form-fix">
