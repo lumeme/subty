@@ -72,7 +72,7 @@
                                 <a :href="portfolio.link" class="w-100" target="_blank">
                                     <img :src="portfolio.image" alt="" class="img">
                                 </a>
-                                <div class="info-hover w-100">
+                                <a :href="portfolio.link" class="info-hover w-100" target="_blank">
                                     <div class="row justify-content-center align-items-end h-100">
                                         <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0">
                                             <h3>{{ portfolio.name }}</h3>
@@ -84,7 +84,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -174,5 +174,8 @@ const setResultPorfolio = (x) => {
 .pop-up {
   animation: pop-up 0.4s ease-in-out;
   opacity: 1;
+}
+a{
+    text-decoration: none;
 }
 </style>

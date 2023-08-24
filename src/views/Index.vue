@@ -119,9 +119,6 @@ function sendMail() {
     const name = contact.value.name;
     const email = contact.value.email;
     const phone = results.value.formatInternational;
-    
-    console.log(message)
-    console.log(persoMessage.value)
     if(persoMessage.value){
         switch (persoMessage.value) {
             case 1:
@@ -144,6 +141,7 @@ function sendMail() {
     }else{
         message = contact.value.message;
     }
+    console.log(message)
     const validateEmailConst = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;   
     const validatePhoneConst = /^\+?[\d\s-]+$/;
     // Validación para verificar si alguno de los campos está vacío

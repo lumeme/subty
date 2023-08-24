@@ -4,8 +4,8 @@
             <!-- <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
                 <h2>{{ $t('message.contact') }}</h2>
             </div> -->
-            <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-center  px-0">
-                <div class="col-12 col-lg-7 col-xxl-6 d-flex flex-column justify-content-center justify-content-lg-start align-items-start px-0 pt-3">
+            <form action="api/send_mail.php" method="post" id="mailForm" class="row justify-content-center justify-content-lg-start  px-0">
+                <div class="col-12 col-lg-7 me-lg-5 d-flex flex-column justify-content-center justify-content-lg-start align-items-start px-0 pt-3">
                     <h3 class="title">{{ $t('message.companyOf') }}<br class="d-none d-xxl-flex">{{ $t('message.subtitling') }}</h3>
                     <p class="subtitle">
                       {{ $t('message.expand') }}<br>
