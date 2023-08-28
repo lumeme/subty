@@ -2,27 +2,31 @@
     <div class="container-fluid" id="home">
         <div id="preload-images"></div>
         <div class="row justify-content-center" id="top">
-           <div class="background-one d-flex flex-column justify-content-center align-items-center">
+            <div class="background-one d-flex flex-column justify-content-center align-items-center">
                 <Navbar/>
                 <!--- CONTACT --->
                 <Contact id="home"/>
-           </div>
-          <!--- PRICING --->
-          <Pricing id="pricing"/>
-          <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center">
-            <div class="row justify-content-center" id="portfolio">
-              <!--- PORFOLIO --->
-              <Portfolio/>
             </div>
-          </div>
-          <!--- SERVICES --->
-          <Services/>
-          <!--- ABOUT --->
-          <About/>
-          <!--- TEAM --->
-          <TeamMobile/>
-          <!--- CONTACT --->
-          <ContactEnd id="contact"/>
+            <!--- SERVICES --->
+            <Services/>
+            <!--- BENEFICIOS --->
+            <Benefits/>
+            <!--- TESTIMONIOS --->
+            <Testimony/>
+            <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center">
+                <div class="row justify-content-center" id="portfolio">
+                    <!--- PORFOLIO --->
+                    <Portfolio/>
+                </div>
+            </div>
+            <!--- PRICING --->
+            <Pricing id="pricing"/>
+            <!--- ABOUT --->
+            <About/>
+            <!--- TEAM --->
+            <TeamMobile/>
+            <!--- CONTACT --->
+            <ContactEnd id="contact"/>
         </div>
 
       <!--- <div class="row justify-content-center background-3">
@@ -53,6 +57,8 @@ import Contact from "../componets/Contact.vue";
 import Footer from "../componets/Footer.vue";
 import ContactEnd from "@/componets/ContactEnd.vue";
 import Pricing from "../componets/Pricing.vue";
+import Benefits from "../componets/Benefits.vue"
+import Testimony from "../componets/Testimony.vue";
 
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";

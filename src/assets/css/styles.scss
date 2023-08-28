@@ -738,6 +738,79 @@ body{
         }
     }
 }
+.benefits{
+    margin-bottom: 30px;
+    h2{
+        text-align: center;
+        min-height: 100px;
+    }
+    .jImage{
+        width: 300px;
+        height: 300px;
+        background-color: white;
+    }
+}
+.testimonials{
+    padding-top: 5vw;
+    white-space: nowrap;
+    color: white;
+    background-color: var(--bgContact);
+    .stars{
+        max-height: 32px;
+    }
+    .star{
+        width: 32px;
+        height: 32px;
+    }
+    .bubble{
+        border-radius: 15px;
+        border: 2px solid rgba($color: #DD0000, $alpha: 1.0);
+        background-color: var(--bgContact);
+        width: 350px;
+        height: 120px;
+        padding-bottom: 45px;
+        padding-top: 10px;    
+    }
+    @media (max-width: 767px) {
+        justify-content: center !important;
+        align-items: center !important;
+        .bubble{
+            flex: 0 0 auto;
+            width: 51%;
+            margin-bottom: 4rem !important;
+        }
+        .elmo{
+            justify-content: center !important;
+            align-items: center !important;
+        }
+    }
+    @media (min-width: 768px) {
+        justify-content: center !important;
+        align-items: center !important;
+        .bubble{
+            flex: 0 0 auto;
+            width: 51%;
+            margin-bottom: 3rem !important;
+        }
+        .elmo{
+            justify-content: center !important;
+            align-items: center !important;
+        }
+    }
+    @media (min-width: 1092px) {
+        justify-content: space-between !important;
+        align-items: center !important;
+        .bubble{
+            flex: 0 0 auto;
+            width: 350px;
+            margin-bottom: 3rem !important;
+        }
+        .elmo{
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+    }
+}
 .team{
     .large-text{
         font-size: 18px;
