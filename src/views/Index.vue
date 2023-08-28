@@ -7,6 +7,8 @@
                 <!--- CONTACT --->
                 <Contact id="home"/>
             </div>
+            <!--- PROBLEM --->
+            <Problem/>
             <!--- SERVICES --->
             <Services/>
             <!--- BENEFICIOS --->
@@ -59,7 +61,7 @@ import ContactEnd from "@/componets/ContactEnd.vue";
 import Pricing from "../componets/Pricing.vue";
 import Benefits from "../componets/Benefits.vue"
 import Testimony from "../componets/Testimony.vue";
-
+import Problem from "../componets/Problem.vue"
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
 import { ref, provide } from 'vue';

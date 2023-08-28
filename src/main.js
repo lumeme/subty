@@ -13,6 +13,8 @@ import VueTelInput from 'vue3-tel-input'
 import 'vue3-tel-input/dist/vue3-tel-input.css'
 import { i18n } from '../src/stores/general'
 
+import ApexCharts from 'vue3-apexcharts'
+
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 
@@ -36,6 +38,7 @@ const VueTelInputOptions = {
 app.use(createPinia())
 app.use(VueTelInput, VueTelInputOptions)
 app.use(i18n)
+app.use(ApexCharts)
 app.use(router)
 
 app.mount('#app')
