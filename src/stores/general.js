@@ -19,20 +19,6 @@ export const useGeneralStore = defineStore('general', () => {
     const setPortfolios = ref({})
     const filterResult = ref()
 
-    setInterval(function() {
-        const navbar = document.getElementById('navbar')
-            //console.log('hola')
-            window.onscroll = function() {
-                let y = window.scrollY;
-                //console.log(y);
-                if( y >= 1 ){
-                    navbar.classList.add('background-color')
-                }else{
-                    navbar.classList.remove('background-color')
-                }
-            }
-    }, 1000);
-
     const scroll = (id) => {
         const section = document.getElementById(id);
             if(window.innerWidth >= 992) {

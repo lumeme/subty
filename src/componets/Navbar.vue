@@ -1,6 +1,6 @@
 <template>
     <div class="col-12 d-flex justify-content-center align-items-center">
-        <nav class="navbar fixed-top" id="navbar">
+        <nav class="navbar fixed-top background-color" id="navbar">
             <div class="container-fluid justify-content-center align-items-center">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center px-lg-1">
