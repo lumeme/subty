@@ -764,7 +764,7 @@ body{
         border-radius: 15px;
         border: 2px solid rgba($color: #DD0000, $alpha: 1.0);
         background-color: var(--bgContact);
-        width: 350px;
+        width: 32%;
         height: 120px;
         padding-bottom: 45px;
         padding-top: 10px;    
@@ -774,7 +774,7 @@ body{
         align-items: center !important;
         .bubble{
             flex: 0 0 auto;
-            width: 51%;
+            width: 80%;
             margin-bottom: 4rem !important;
         }
         .elmo{
@@ -800,7 +800,7 @@ body{
         align-items: center !important;
         .bubble{
             flex: 0 0 auto;
-            width: 350px;
+            width: 32%;
             margin-bottom: 3rem !important;
         }
         .elmo{
