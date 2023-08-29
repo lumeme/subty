@@ -7,7 +7,7 @@
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <h2>{{ benefit.title }}</h2>
                         </div>
-                        <div class="col-12 jImage">
+                        <div class="col-12 jImage px-0">
                             <img :src="benefit.image" alt="">
                         </div>
                     </div>
@@ -29,15 +29,15 @@ const {} = general
 const benefits = ref([
     {
         title: 'RETORNO DE INVERSIÓN',
-        image: ''
+        image: '../../img/benefits-icons/1.png'
     },
     {
         title: 'VELOCIDAD',
-        image: ''
+        image: '../../img/benefits-icons/2.png'
     },
     {
         title: 'SEGURIDAD Y COMODIDAD',
-        image: ''
+        image: '../../img/benefits-icons/3.png'
     }
 ])
 
