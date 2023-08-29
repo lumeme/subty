@@ -12,21 +12,21 @@
                             <lord-icon 
                                 src="https://cdn.lordicon.com/yeallgsa.json"
                                 trigger="hover"
-                                colors="primary:#dd0000,secondary:#281f21"
+                                colors="primary:#dd0000,secondary:#494347"
                                 style="width:300px;height:300px"
                                 v-if="benefit.image == 1">
                             </lord-icon>
                             <lord-icon
                                 src="https://cdn.lordicon.com/kbtmbyzy.json"
                                 trigger="hover"
-                                colors="primary:#281f21,secondary:#dd0000"
+                                colors="primary:#494347,secondary:#dd0000"
                                 style="width:300px;height:300px"
                                 v-if="benefit.image == 2">
                             </lord-icon>
                             <lord-icon
                                 src="https://cdn.lordicon.com/yyecauzv.json"
                                 trigger="hover"
-                                colors="primary:#281f21,secondary:#dd0000"
+                                colors="primary:#494347,secondary:#dd0000"
                                 style="width:300px;height:300px"
                                 v-if="benefit.image == 3">
                             </lord-icon>

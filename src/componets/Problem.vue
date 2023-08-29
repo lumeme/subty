@@ -45,7 +45,7 @@ const chartOptions = {
         type: 'pie',
     },
     colors:['#DD0000', '#GGGGGG'],
-    labels: ['Tu público', 'Otras personas'],
+    labels: ['Otras personas', 'Tu público'],
     plotOptions: {
         pie: {
             expandOnClick: false,
@@ -71,7 +71,10 @@ const chartOptions = {
                 width: 400
             }
         }
-    }]
+    }],
+    tooltip: {
+        enabled: false
+  }
 }
 
 </script>
