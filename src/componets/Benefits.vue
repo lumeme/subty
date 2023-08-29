@@ -8,7 +8,28 @@
                             <h2>{{ benefit.title }}</h2>
                         </div>
                         <div class="col-12 jImage px-0">
-                            <img :src="benefit.image" alt="">
+                            <!-- <img :src="benefit.image" alt="" style="width: 100%;"> -->
+                            <lord-icon 
+                                src="https://cdn.lordicon.com/yeallgsa.json"
+                                trigger="hover"
+                                colors="primary:#dd0000,secondary:#281f21"
+                                style="width:300px;height:300px"
+                                v-if="benefit.image == 1">
+                            </lord-icon>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/kbtmbyzy.json"
+                                trigger="hover"
+                                colors="primary:#281f21,secondary:#dd0000"
+                                style="width:300px;height:300px"
+                                v-if="benefit.image == 2">
+                            </lord-icon>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/yyecauzv.json"
+                                trigger="hover"
+                                colors="primary:#281f21,secondary:#dd0000"
+                                style="width:300px;height:300px"
+                                v-if="benefit.image == 3">
+                            </lord-icon>
                         </div>
                     </div>
                 </div>
@@ -29,15 +50,15 @@ const {} = general
 const benefits = ref([
     {
         title: 'RETORNO DE INVERSIÓN',
-        image: '../../img/benefits-icons/1.png'
+        image: '1'
     },
     {
         title: 'VELOCIDAD',
-        image: '../../img/benefits-icons/2.png'
+        image: '2'
     },
     {
         title: 'SEGURIDAD Y COMODIDAD',
-        image: '../../img/benefits-icons/3.png'
+        image: '3'
     }
 ])
 
