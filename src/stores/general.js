@@ -97,6 +97,7 @@ export const useGeneralStore = defineStore('general', () => {
 export const i18n = new createI18n({
     locale: 'en',
     legacy: false,
+    globalInjection: true,
     messages: {
         en:{
           message: en

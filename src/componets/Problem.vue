@@ -12,13 +12,10 @@
                     </div>
                     <div class="row justify-content-center w-100">
                         <div class="col-12 d-flex justify-content-center justify-content-xl-start align-items-center">
-                            <h1>El 93% de las personas no puede entenderte.</h1>
+                            <h1>{{ $t('message.ninetyThree') }}</h1>
                         </div>
                         <div class="col-12 d-flex justify-content-center justify-content-xl-start align-items-center">
-                            <h3 style="max-width: 80%;">En el mundo hay cada vez mas personas que no pueden disfrutar
-                                de tu contenido debido a la barrera idiomatica que los separa.
-                                Millones de personas estan esperando unirse a tu comunidad, 
-                                brindales un puente a tu vida con nuestros subtitulos de alta calidad.
+                            <h3 style="max-width: 80%;">{{ $t('message.ninetyThreeText') }}
                             </h3>
                         </div>
                     </div>
@@ -29,14 +26,6 @@
 </template>
 
 <script setup>
-import { useGeneralStore } from "@/stores/general";
-import { storeToRefs } from "pinia";
-import { ref } from 'vue';
-
-const general = useGeneralStore();
-const {setServices} = storeToRefs(general);
-const {} = general
-
 const series = [93, 7]
           
 const chartOptions = {

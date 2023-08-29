@@ -25,10 +25,10 @@
             <Pricing id="pricing"/>
             <!--- ABOUT --->
             <About/>
-            <!--- TEAM --->
-            <TeamMobile/>
             <!--- CONTACT --->
             <ContactEnd id="contact"/>
+            <!--- TEAM --->
+            <TeamMobile/>
         </div>
 
       <!--- <div class="row justify-content-center background-3">
