@@ -48,15 +48,18 @@ const chartOptions = {
     labels: ['Tu público', 'Otras personas'],
     plotOptions: {
         pie: {
-            expandOnClick: false
+            expandOnClick: false,
+            startAngle: 170,
+            endAngle: -190,
         }
     },
     legend: {
         show: false
     },
     dataLabels: {
+        enabled: true,
         style: {
-            fontSize: '32px',
+            fontFamily: 'Muli',
             fontWeight: 'bold',
         }
     },
