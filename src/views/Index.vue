@@ -9,6 +9,8 @@
             </div>
             <!--- PROBLEM --->
             <Problem/>
+            <!--- SOLUTION --->
+            <Solution/>
             <!--- SERVICES --->
             <Services/>
             <!--- BENEFICIOS --->
@@ -50,27 +52,28 @@
 </template>
 
 <script setup>
-import Navbar from "../componets/Navbar.vue";
-import About from "../componets/About.vue";
-import Services from "../componets/Services.vue";
-import Portfolio from "../componets/Portfolio.vue";
-import TeamMobile from "../componets/TeamMobile.vue";
-import Contact from "../componets/Contact.vue";
-import Footer from "../componets/Footer.vue";
-import ContactEnd from "@/componets/ContactEnd.vue";
-import Pricing from "../componets/Pricing.vue";
+import Navbar from "../componets/Navbar.vue"
+import About from "../componets/About.vue"
+import Services from "../componets/Services.vue"
+import Portfolio from "../componets/Portfolio.vue"
+import TeamMobile from "../componets/TeamMobile.vue"
+import Contact from "../componets/Contact.vue"
+import Footer from "../componets/Footer.vue"
+import ContactEnd from "@/componets/ContactEnd.vue"
+import Pricing from "../componets/Pricing.vue"
 import Benefits from "../componets/Benefits.vue"
-import Testimony from "../componets/Testimony.vue";
+import Testimony from "../componets/Testimony.vue"
 import Problem from "../componets/Problem.vue"
-import { useGeneralStore } from "@/stores/general";
-import { storeToRefs } from "pinia";
-import { ref, provide } from 'vue';
-import { createI18n, useI18n } from "vue-i18n";
+import Solution from "../componets/Solution.vue"
+import { useGeneralStore } from "@/stores/general"
+import { storeToRefs } from "pinia"
+import { ref, provide } from 'vue'
+import { createI18n, useI18n } from "vue-i18n"
 
 import Swal from 'sweetalert2'
 
-const general = useGeneralStore();
-const {} = storeToRefs(general);
+const general = useGeneralStore()
+const {} = storeToRefs(general)
 const {scroll, url} = general
 
 const { t } = useI18n({ useScope: 'global' })
