@@ -732,11 +732,12 @@
                   </div>
                 </div>
               </div>
+            </div>
           </div>
-          <!--- END TABS --->
-        </div>
+        </div>  <!--- END TABS --->
       </div>
     </div>
+  </div>
 </template>
 
 <script setup>
