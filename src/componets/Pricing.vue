@@ -86,7 +86,6 @@
                             </div>
                             <p>{{ $t('message.expansionMinuteSubtitle') }}</p>
                           </div>
-<<<<<<< Updated upstream
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 2; updateMessage(); scroll('home')">
                               {{ $t('message.chooseButton') }}
@@ -118,7 +117,6 @@
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.expansionTextNine') }}</p>
                               </div>
-=======
                           <p>{{ $t('message.expansionMinuteSubtitle') }}</p>
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center px-0">
@@ -151,12 +149,10 @@
                             <div class="col-12 d-flex justify-content-start align-items-center info">
                               <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                               <p>{{ $t('message.expansionTextNine') }}</p>
->>>>>>> Stashed changes
                             </div>
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                   <div class="col-12 col-lg-6 col-xxl-3 d-flex justify-content-center align-items-center container-card pricing px-0 pe-lg-2 px-xxl-2 mx-0">
@@ -168,7 +164,6 @@
                               <h3>
                                 <img src="../../img/about-icons/world.svg" alt="">
                                 {{ $t('message.global') }}</h3>
-
                             </div>
                             <p>{{ $t('message.globalLenguage') }}</p>
                           </div>
@@ -178,7 +173,6 @@
                             </div>
                             <p>{{ $t('message.globalMinuteSubtitle') }}</p>
                           </div>
-<<<<<<< Updated upstream
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 3; updateMessage(); scroll('home')">
                               {{ $t('message.chooseButton') }}
@@ -206,7 +200,6 @@
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextTen') }}</p>
                               </div>
-=======
                           <p>{{ $t('message.globalMinuteSubtitle') }}</p>
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center px-0">
@@ -235,7 +228,6 @@
                             <div class="col-12 d-flex justify-content-start align-items-center info">
                               <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                               <p>{{ $t('message.globalTextTen') }}</p>
->>>>>>> Stashed changes
                             </div>
                           </div>
                         </div>
@@ -265,11 +257,8 @@
                                 <p>{{ $t('message.letsTalkText') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-
-<<<<<<< Updated upstream
                                 <p>{{ $t('message.letsTalkTextTwo') }}</p>
                               </div>
-=======
                               <p>{{ $t('message.letsTalkTextTwo') }}</p>
                             </div>
                           </div>
@@ -406,7 +395,6 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
                 <div class="col-12 col-lg-6 col-xxl-3 d-flex justify-content-center align-items-center container-card pricing px-0 pe-lg-2 px-xxl-2 mx-0">
@@ -418,7 +406,6 @@
                             <h3>
                               <img src="../../img/about-icons/world.svg" alt="">
                               {{ $t('message.global') }}</h3>
-
                           </div>
                           <p>{{ $t('message.globalLenguage') }}</p>
                         </div>
@@ -504,9 +491,7 @@
                               <p>{{ $t('message.letsTalkText') }}</p>
                             </div>
                             <div class="col-12 d-flex justify-content-start align-items-center info">
-
                               <p>{{ $t('message.letsTalkTextTwo') }}</p>
->>>>>>> Stashed changes
                             </div>
                           </div>
                         </div>
@@ -640,7 +625,6 @@
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                   <div class="col-12 col-lg-6 col-xxl-3 d-flex justify-content-center align-items-center container-card pricing px-0 pe-lg-2 px-xxl-2 mx-0">
@@ -738,7 +722,6 @@
                                 <p>{{ $t('message.letsTalkText') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-
                                 <p>{{ $t('message.letsTalkTextTwo') }}</p>
                               </div>
                             </div>
@@ -752,6 +735,7 @@
           </div>
           <!--- END TABS --->
         </div>
+      </div>
     </div>
 </template>
 
