@@ -182,6 +182,7 @@ onMounted(() => {
                             series: series,
                         }, true, true)
                     }, 100)
+                    observer.unobserve(entry.target)
                 }
             }
         })
