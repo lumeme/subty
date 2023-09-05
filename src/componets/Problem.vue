@@ -6,7 +6,7 @@
                     <div class="row justify-content-center w-100">
                         <div class="col d-flex justify-content-center align-items-center">
                             <div id="chart">
-                                <apexchart type="pie" width="750" :options="chartOptions" :series="series"></apexchart>
+                                <apexchart type="pie" width="650" :options="chartOptions" :series="series"></apexchart>
                             </div>
                         </div>
                     </div>
@@ -26,6 +26,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
+
 const series = [93, 7]
           
 const chartOptions = {
