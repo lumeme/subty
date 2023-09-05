@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Gráfico de Líneas Animado</title>
+<style>body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#lineGraph {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.appear {
+    animation: appear 0.5s ease-in-out forwards;
+}
+</style>
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const points = [
+        { x: 0, y: 0 },
+        { x: 100, y: 30 },
+        { x: 200, y: 12 },
+        { x: 300, y: 26 },
+        { x: 400, y: 14 },
+        { x: 500, y: 24 },
+        { x: 600, y: 15 },
+        { x: 700, y: 23 }, // Incremento adicional de 5
+        { x: 800, y: 110 }, // Incremento adicional de 10
+        { x: 900, y: 80 }, // Incremento adicional de 20
+        { x: 1000, y: 140 }, // Incremento adicional de 30
+        { x: 1100, y: 120 }, // Incremento adicional de 40
+        { x: 1200, y: 200 } // Incremento adicional de 50
+    ]
+
+
+    
+    const svg = document.getElementById('lineGraph');
+    const namespace = 'http://www.w3.org/2000/svg';
+    
+    let pathString = 'M' + points[0].x + ' ' + (400 - points[0].y * 2);
+    let partialPathString = 'M' + points[0].x + ' ' + (400 - points[0].y * 2);
+
+    for (let i = 1; i < points.length; i++) {
+        pathString += ' L' + points[i].x + ' ' + (400 - points[i].y * 2);
+        if (i < 7) {
+            partialPathString += ' L' + points[i].x + ' ' + (400 - points[i].y * 2);
+        }
+    }
+
+    const path = document.createElementNS(namespace, 'path');
+    path.setAttribute('d', pathString);
+    path.setAttribute('stroke', 'blue');
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('fill', 'none');
+
+    // Añadiendo animación
+    path.addEventListener('transitionend', () => {
+        circle.classList.add('appear');
+        text.classList.add('appear');
+    });
+    
+    svg.appendChild(path);
+
+    // Añadiendo un círculo en el octavo punto
+    const circle = document.createElementNS(namespace, 'circle');
+    circle.setAttribute('cx', points[7].x);
+    circle.setAttribute('cy', 400 - points[7].y * 2);
+    circle.setAttribute('r', '4');
+    circle.setAttribute('fill', 'red');
+    circle.style.opacity = '0';
+    svg.appendChild(circle);
+
+    // Añadiendo texto en diagonal abajo a la derecha del octavo punto
+    const text = document.createElementNS(namespace, 'text');
+    text.setAttribute('x', points[7].x + 5);
+    text.setAttribute('y', 400 - points[7].y * 2 + 15);
+    text.setAttribute('transform', 'rotate(-45,' + (points[7].x + 5) + ',' + (400 - points[7].y * 2 + 15) + ')');
+    text.textContent = 'Subtitulos';
+    text.style.opacity = '0';
+    svg.appendChild(text);
+
+    const partialPath = document.createElementNS(namespace, 'path');
+    partialPath.setAttribute('d', partialPathString);
+    partialPath.setAttribute('stroke', 'transparent');
+    partialPath.setAttribute('stroke-width', '2');
+    partialPath.setAttribute('fill', 'none');
+    svg.appendChild(partialPath);
+
+    let totalLength = path.getTotalLength();
+    let partialLength = partialPath.getTotalLength();
+    let animationDuration = 2100; // duración total de la animación en milisegundos
+    let partialDuration = (partialLength / totalLength) * animationDuration;
+
+    setTimeout(() => {
+        circle.classList.add('appear');
+        text.classList.add('appear');
+    }, partialDuration);
+    
+    let length = path.getTotalLength();
+    path.style.transition = 'none';
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    svg.getBoundingClientRect();
+    path.style.transition = 'stroke-dashoffset 2s ease-in-out';
+    path.style.strokeDashoffset = '0';
+    });
+
+</script>
+</head>
+<body>
+<svg width="1200" height="400" id="lineGraph"></svg>
+<script src="script.js"></script>
+</body>
+</html>
