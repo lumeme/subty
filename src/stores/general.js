@@ -72,7 +72,7 @@ export const useGeneralStore = defineStore('general', () => {
             console.log(error)
         }
     })
-    fetchServices()
+    fetchServices(locale.value)
 
     
     
