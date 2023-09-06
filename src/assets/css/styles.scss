@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6, p{
     --mediumGrey: #A29D9D;
     --mediumGrey2:#ABA8AA;
     --yellow: #DD0000;
+    --yellow2: #990000;
     --bgSideMenu: #181219;
     --bgPrimary: #080005;
     --bgCards: #1E1518;
@@ -482,9 +483,6 @@ body{
             text-align: center;
             max-width: 72%;
         }
-        img{
-            // margin-right: 15px;
-        }
         .info, .info-hover{
             background-color: var(--bgCards);
             border-radius: 15px;
@@ -826,6 +824,13 @@ body{
         text-align: left;
         padding-top: 20px;
     }
+    span{
+        color: var(--white);
+        font-size: 22px;
+        font-family: 'Muli', 'Poppins';
+        font-weight: 700;
+        text-align: left;
+    }
     @media (min-width: 992px) {
         h1{
             color: var(--white);
@@ -843,6 +848,13 @@ body{
             text-align: left;
             padding-top: 20px;
         }
+        span{
+            color: var(--white);
+            font-size: 28px;
+            font-family: 'Muli', 'Poppins';
+            font-weight: 700;
+            text-align: left;
+        }
     }
     .apexcharts-pie-label{
         font-size: 40px !important;
@@ -850,6 +862,24 @@ body{
     .apexcharts-point-annotation-label{
         font-size: 28px !important;
         font-style: italic
+    }
+    .highlight {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        color: var(--white);
+    }
+      
+    .highlight::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 101%;
+        height: 100%;
+        background-color: var(--yellow2);
+        transform: rotate(-5deg);
+        z-index: -1;
     }
 }
 .team{
