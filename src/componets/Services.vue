@@ -5,7 +5,7 @@
                 <div class="col-12 d-flex flex-column justify-content-center align-items-start px-0 pb-4">
                     <h2>{{ $t('message.services') }}</h2>
                 </div>
-                <div class="col-12 col-md-4  d-flex justify-content-center align-items-start card-grey-container" v-for="(servicies, id) in setServices" :class="id >=  4 ? 'd-none d-lg-flex hidden-div' : ''" :key="servicies">
+                <div class="col-12 d-flex justify-content-center align-items-start card-grey-container" v-for="(servicies, id) in setServices" :class="id >=  4 ? 'd-none d-lg-flex hidden-div' : ''" :key="servicies">
                     <div class="row justify-content-center h-100 w-100 card-grey">
                         <div class="col-12 d-flex justify-content-center align-items-center info">
                             <img :src="servicies.image" alt="">

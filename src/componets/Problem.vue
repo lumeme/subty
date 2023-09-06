@@ -51,6 +51,9 @@ const chartOptions = {
             expandOnClick: false,
             startAngle: 170,
             endAngle: -190,
+            dataLabels: {
+                offset: -50
+            }
         }
     },
     legend: {
@@ -58,7 +61,8 @@ const chartOptions = {
     },
     dataLabels: {
         enabled: true,
-        offsetY: -100,
+        offsetY: 100,
+        textAnchor: 'center',
         style: {
             fontFamily: 'Muli',
             fontWeight: 'bold',
