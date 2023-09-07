@@ -117,7 +117,7 @@
                           <div class="col-12 d-flex justify-content-center align-items-start px-0">
                             <div class="row justify-content-center w-100">
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.expansionTextFive') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
@@ -262,19 +262,19 @@
                           <div class="col-12 d-flex justify-content-center align-items-start px-0 basic-fix">
                             <div class="row justify-content-center align-items-start w-100">
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.basicTextOne') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.basicTextTwo') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.basicTextThree') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.basicTextFour') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
@@ -319,19 +319,19 @@
                           <div class="col-12 d-flex justify-content-center align-items-start px-0">
                             <div class="row justify-content-center w-100">
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.expansionTextOne') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.expansionTextTwo') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.expansionTextThree') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.expansionTextFour') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
@@ -388,19 +388,19 @@
                           <div class="col-12 d-flex justify-content-center align-items-start px-0">
                             <div class="row justify-content-center w-100">
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextOne') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextTwo') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextThree') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextFour') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
