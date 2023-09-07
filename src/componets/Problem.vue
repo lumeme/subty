@@ -7,7 +7,6 @@
                         <div class="col d-flex justify-content-center align-items-center">
                             <div class="chart" id="chart">
                                 <apexchart v-if="isVisible" type="pie" width="650" :options="chartOptions" :series="series"></apexchart>
-                                
                             </div>
                         </div>
                     </div>
@@ -27,13 +26,21 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { useGeneralStore } from "@/stores/general";
+import { storeToRefs } from "pinia";
+
+const general = useGeneralStore();
+
+const { locale } = storeToRefs(general);
+const {  } = general
 
 let isVisible = ref(false)
 let chartContainer = ref(null)
 let observer
 
 const series = [93, 7]
+const seriesEn = [80, 20]
           
 const chartOptions = {
     chart: {
@@ -60,6 +67,9 @@ const chartOptions = {
         show: false
     },
     dataLabels: {
+        formatter: function(val) {
+            return Math.floor(val)+"%"
+        },
         enabled: true,
         offsetY: 100,
         textAnchor: 'center',
@@ -77,10 +87,39 @@ const chartOptions = {
             }
         }
     }],
+    states: {
+        normal: {
+            filter: {
+                type: 'none'
+            }
+        },
+        hover: {
+            filter: {
+                type: 'none'
+            }
+        },
+        active: {
+            filter: {
+                type: 'none'
+            }
+        },
+    },
     tooltip: {
         enabled: false
   }
 }
+
+watch(locale, () => {
+    let newSeries = null
+    if(locale.value == 'en'){
+        newSeries = [80, 20]
+    } else{
+        newSeries = [93, 7]
+    }
+    ApexCharts.exec('problem-chart', 'updateOptions', {
+        series: newSeries
+    }, true, true, true)
+})
 
 onMounted(() => {
     observer = new IntersectionObserver((entries) => {
