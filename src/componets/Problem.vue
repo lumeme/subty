@@ -12,7 +12,7 @@
                     </div>
                     <div class="row justify-content-center w-100">
                         <div class="col-12 d-flex justify-content-center justify-content-xl-start align-items-center">
-                            <h1>{{ $t('message.ninetyThree') }}</h1>
+                            <h1 style="max-width: 80%;">{{ $t('message.ninetyThree') }}</h1>
                         </div>
                         <div class="col-12 d-flex justify-content-center justify-content-xl-start align-items-center">
                             <h3 style="max-width: 80%;">{{ $t('message.ninetyThreeText') }}

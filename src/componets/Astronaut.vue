@@ -30,7 +30,7 @@
 }
 
 $word-count: 6;
-$angle: 360deg / $word-count;
+$angle: calc(360deg / $word-count);
 $radius: 150px;
 
 .words {
@@ -42,7 +42,7 @@ $radius: 150px;
 @for $i from 1 through $word-count {
   .word#{$i} {
     transform: rotate($angle * ($i - 1)) translateX($radius) rotate(-$angle * ($i - 1));
-    animation-delay: if($i <= $word-count / 2, ($i - 1) * 1s, ($i - $word-count / 2 - 1) * 1s);
+    animation-delay: if($i <= calc($word-count / 2), ($i - 1) * 1s, ($i - calc($word-count / 2) - 1) * 1s);
   }
 }
 
