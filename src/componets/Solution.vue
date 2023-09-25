@@ -35,16 +35,14 @@ onMounted(() => {
     observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log('Intersection')
-                if (entry.intersectionRatio == 1) {
-                    console.log('Ratio 1.0')
+                if (entry.intersectionRatio == 0.999) {
                     initGraphAnimation()
                     observer.unobserve(entry.target)
                 }
             }
         })
     }, {
-        threshold: 1.0
+        threshold: 0.999
     })
 
     if (observeElement.value) {
@@ -59,7 +57,6 @@ onUnmounted(() => {
 })
 
 const initGraphAnimation = () => {
-    console.log('Animation start')
     const points = [
         { x: 0, y: 0 },
         { x: 50, y: 40 },
