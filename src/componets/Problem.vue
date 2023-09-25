@@ -125,10 +125,8 @@ onMounted(() => {
     observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            console.log(entry.intersectionRatio)
             if (entry.intersectionRatio >= 0.7) {
                 isVisible.value = true
-                console.log(isVisible.value)
                 observer.unobserve(entry.target)
             }
         }
@@ -154,7 +152,6 @@ onUnmounted(() => {
 
 .chart{
     width: 650px;
-    height: 521px;
 }
 
 </style>

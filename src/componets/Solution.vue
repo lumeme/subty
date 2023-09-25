@@ -35,7 +35,7 @@ onMounted(() => {
     observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.intersectionRatio == 0.999) {
+                if (entry.intersectionRatio >= 0.999) {
                     initGraphAnimation()
                     observer.unobserve(entry.target)
                 }
