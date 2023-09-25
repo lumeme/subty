@@ -25,7 +25,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { useI18n } from "vue-i18n";
+import { useGeneralStore } from "@/stores/general";
+import { storeToRefs } from "pinia";
+import { ref, onMounted, onUnmounted, watch } from 'vue';
+
+const general = useGeneralStore();
+
+const { locale } = storeToRefs(general);
+const {  } = general
+
+const { t } = useI18n({ useScope: 'global' })
 
 let observeElement = ref(null)
 let chartRef = ref(null)
@@ -113,7 +123,7 @@ const initGraphAnimation = () => {
     const text = document.createElementNS(namespace, 'text')
     text.setAttribute('x', points[7].x + 10)
     text.setAttribute('y', 400 - points[7].y * 2 + 18)
-    text.textContent = 'Subtitulos'
+    text.textContent = t('message.subtitles')
     text.style.fontFamily = 'Comic Sans MS'
     text.style.fontStyle = 'italic'
     text.style.fontSize = '28px'
@@ -148,6 +158,27 @@ const initGraphAnimation = () => {
     path.style.transition = 'stroke-dashoffset 2s ease-in-out'
     path.style.strokeDashoffset = '0'
 }
+
+watch(locale, () => {
+    const svg = document.getElementById('lineGraph');
+    console.log(svg)
+    // Borrar el path
+    const paths = svg.querySelectorAll('path');
+    paths.forEach(path => path.remove());
+
+    // Borrar el círculo
+    const circle = svg.querySelector('circle');
+    if (circle) {
+        circle.remove();
+    }
+
+    // Borrar el texto
+    const text = svg.querySelector('text');
+    if (text) {
+        text.remove();
+    }
+    initGraphAnimation()
+})
 
 </script>
 

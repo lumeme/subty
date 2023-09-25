@@ -13,7 +13,7 @@
                     </div>
                     <div class="row justify-content-center w-100 ps-0 mx-0">
                         <div class="col-12 d-flex justify-content-end">
-                            <p class="py-0 pt-4">{{ testimony.name}}</p>
+                            <p class="py-0 pt-4">{{ testimony.name }}</p>
                         </div>
                     </div>
                 </div>
@@ -23,27 +23,30 @@
 </template>
 
 <script setup>
+import { useI18n } from "vue-i18n";
 import { useGeneralStore } from "@/stores/general";
 import { storeToRefs } from "pinia";
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const general = useGeneralStore();
 const {setServices} = storeToRefs(general);
 const {} = general
 
+const { t } = useI18n({ useScope: 'global' })
+
 const testimonials = ref([
     {
-        title: 'Excelente servicio!',
+        title: computed(() => t('message.naka')),
         rates: 5,
         name: '- Naka, Japatonic Lite'
     },
     {
-        title: 'Confiables y de alta calidad!',
+        title: computed(() => t('message.araya')),
         rates: 5,
         name: '- Cristhoper, Araya Vlogs'
     },
     {
-        title: 'Muy atentos y profesionales!',
+        title: computed(() => t('message.jpgeek')),
         rates: 5,
         name: '- Francisco, JapanGeek'
     }
