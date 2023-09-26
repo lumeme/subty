@@ -14,7 +14,9 @@
                     <div class="row justify-content-center w-100">
                         <div class="col d-flex justify-content-center justify-content-xl-start align-items-start" ref="observeElement">
                             <div class="mt-5" ref="chartRef" id="chart">
-                                <svg width="610" height="400" id="lineGraph"></svg>
+                                <svg id="lineGraph" width="610" height="400">
+                                    <g id="graphContent"></g>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -84,6 +86,7 @@ const initGraphAnimation = () => {
     ]
     
     const svg = document.getElementById('lineGraph');
+    const graphContent = document.getElementById('graphContent')
     const namespace = 'http://www.w3.org/2000/svg';
     
     let pathString = 'M' + points[0].x + ' ' + (400 - points[0].y * 2);
@@ -108,7 +111,7 @@ const initGraphAnimation = () => {
         text.classList.add('appear');
     });
     
-    svg.appendChild(path);
+    graphContent.appendChild(path);
 
     // Añadiendo un círculo en el octavo punto
     const circle = document.createElementNS(namespace, 'circle');
@@ -117,7 +120,7 @@ const initGraphAnimation = () => {
     circle.setAttribute('r', '10');
     circle.setAttribute('fill', '#0000cc');
     circle.style.opacity = '0';
-    svg.appendChild(circle);
+    graphContent.appendChild(circle);
 
     // Añadiendo texto en diagonal abajo a la derecha del octavo punto
     const text = document.createElementNS(namespace, 'text')
@@ -129,19 +132,27 @@ const initGraphAnimation = () => {
     text.style.fontSize = '28px'
     text.setAttribute('fill', '#ABA8AA')
     text.style.opacity = '0'
-    svg.appendChild(text)
+    graphContent.appendChild(text)
 
     const partialPath = document.createElementNS(namespace, 'path')
     partialPath.setAttribute('d', partialPathString)
     partialPath.setAttribute('stroke', 'transparent')
     partialPath.setAttribute('stroke-width', '2')
     partialPath.setAttribute('fill', 'none')
-    svg.appendChild(partialPath)
+    graphContent.appendChild(partialPath)
 
     let totalLength = path.getTotalLength()
     let partialLength = partialPath.getTotalLength()
     let animationDuration = 2350
     let partialDuration = (partialLength / totalLength) * animationDuration
+
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 480) {
+        graphContent.setAttribute('transform', 'scale(0.5)');
+        svg.setAttribute('width', '305');
+        svg.setAttribute('height', '200');
+    }
 
     setTimeout(() => {
         circle.style.opacity = ''
