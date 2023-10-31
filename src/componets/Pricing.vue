@@ -39,7 +39,7 @@
                               </div>
                               <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                                 <div class="d-flex justify-content-start align-items-center w-100 mb-1">
-                                  <h3>$1<p>USD/{{ $t('message.minuteVideo') }}</p></h3>
+                                  <h3>$1.33<p>USD/{{ $t('message.minuteVideo') }}</p></h3>
                                 </div>
                                 <p>{{ $t('message.basicMinuteSubtitle') }}</p>
                               </div>
@@ -105,7 +105,7 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$1.35 <p>USD/{{ $t('message.minuteVideo') }}</p></h3>
+                              <h3>$2.50 <p>USD/{{ $t('message.minuteVideo') }}</p></h3>
                             </div>
                             <p>{{ $t('message.expansionMinuteSubtitle') }}</p>
                           </div>
@@ -162,7 +162,7 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$1.50<p>USD/{{ $t('message.minuteVideo') }}</p></h3>
+                              <h3>$3.00<p>USD/{{ $t('message.minuteVideo') }}</p></h3>
                             </div>
                             <p>{{ $t('message.globalMinuteSubtitle') }}</p>
                           </div>
@@ -206,24 +206,44 @@
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>
-                                <img src="../../img/about-icons/people.svg" alt="">
-                                Lets talk</h3>
+                                <img src="../../img/about-icons/world.svg" alt="">
+                                {{ $t('message.pro') }}</h3>
+
                             </div>
-                            <p class="py-4 mt-5 pt-lg-5 mt-lg-1">{{ $t('message.letsTalkProposal') }}</p>
+                            <p>{{ $t('message.proLenguage') }}</p>
+                          </div>
+                          <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
+                            <div class="d-flex justify-content-start align-items-center w-100">
+                              <h3>$3.99<p>USD/{{ $t('message.minuteVideo') }}</p></h3>
+                            </div>
+                            <p>{{ $t('message.proMinuteSubtitle') }}</p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <button @click="persoMessage = 4; updateMessage(); scroll('home')">
+                            <button @click="persoMessage = 3; updateMessage(); scroll('home')">
                               {{ $t('message.chooseButton') }}
                             </button>
                           </div>
-                          <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                          <div class="col-12 d-flex justify-content-center align-items-start px-0">
                             <div class="row justify-content-center w-100">
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <p>{{ $t('message.letsTalkText') }}</p>
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextEight') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-
-                                <p>{{ $t('message.letsTalkTextTwo') }}</p>
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextThree') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextSix') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextNine') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextTen') }}</p>
                               </div>
                             </div>
                           </div>
@@ -252,7 +272,7 @@
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>$150<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
-                            <p><span>$1800</span>{{ $t('message.basicYear') }}</p>
+                            <p v-html="$t('message.basicYear')"></p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 1; updateMessage(); scroll('home')">
@@ -307,9 +327,9 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$200<p>USD/{{ $t('message.month') }}</p></h3>
+                              <h3>$250<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
-                            <p>{{ $t('message.expansionYear') }}</p>
+                            <p v-html="$t('message.expansionYear')"></p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 2; updateMessage(); scroll('home')">
@@ -376,9 +396,9 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$250<p>USD/{{ $t('message.month') }}</p></h3>
+                              <h3>$300<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
-                            <p>{{ $t('message.globalYear') }}</p>
+                            <p v-html="$t('message.globalYear')"></p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 3; updateMessage(); scroll('home')">
@@ -441,23 +461,63 @@
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>
                                 <img src="../../img/about-icons/people.svg" alt="">
-                                Lets talk</h3>
+                                {{ $t('message.pro') }}</h3>
+
                             </div>
-                            <p class="py-4 mt-5 pt-lg-5 mt-lg-1">{{ $t('message.letsTalkProposal') }}</p>
+                            <p>{{ $t('message.proLenguage') }}</p>
+                          </div>
+                          <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
+                            <div class="d-flex justify-content-start align-items-center w-100">
+                              <h3>$349<p>USD/{{ $t('message.month') }}</p></h3>
+                            </div>
+                            <p v-html="$t('message.proYear')"></p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <button @click="persoMessage = 4; updateMessage(); scroll('home')">
+                            <button @click="persoMessage = 3; updateMessage(); scroll('home')">
                               {{ $t('message.chooseButton') }}
                             </button>
                           </div>
-                          <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                          <div class="col-12 d-flex justify-content-center align-items-start px-0">
                             <div class="row justify-content-center w-100">
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-                                <p>{{ $t('message.letsTalkText') }}</p>
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextOne') }}</p>
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
-
-                                <p>{{ $t('message.letsTalkTextTwo') }}</p>
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextTwo') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextThree') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/infinity.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextFour') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextFive') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextSix') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextSeven') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextEight') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextNine') }}</p>
+                              </div>
+                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                                <img src="../../img/pricing-icons/check.svg" alt="" class="check">
+                                <p>{{ $t('message.globalTextTen') }}</p>
                               </div>
                             </div>
                           </div>
