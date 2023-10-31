@@ -27,7 +27,7 @@
                     <div class="row justify-content-center h-100 w-100 card-grey">
                       <div class="col-12 d-flex justify-content-center align-items-start px-0">
                         <div class="row justify-content-center w-100">
-                          <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
+                          <div class="col-12 d-flex flex-column justify-content-center align-items-center info">
                             <div class="row justify-content-center w-100">
                               <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                                 <div class="d-flex justify-content-start align-items-center w-100">
