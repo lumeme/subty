@@ -75,7 +75,7 @@
                                 <a class="nav-link" aria-current="page" @click="scroll('home')" data-bs-dismiss="offcanvas">{{ $t('message.home') }}</a>
                             </li>
                             <li class="nav-item col-lg-4  d-flex justify-content-center align-items-center">
-                                <button class="nav-link" aria-current="page" @click="scroll('pricing')">{{ $t('message.pricing') }}</button>
+                                <a class="nav-link" aria-current="page" @click="scroll('pricing')" data-bs-dismiss="offcanvas">{{ $t('message.pricing') }}</a>
                             </li>
                           <li class="nav-item">
                             <a class="nav-link" @click="scroll('portfolio')" data-bs-dismiss="offcanvas">{{ $t('message.portfolio') }}</a>
