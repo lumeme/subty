@@ -770,6 +770,19 @@ body{
         padding-bottom: 45px;
         padding-top: 10px;    
     }
+    @media (min-width: 375px) {
+        justify-content: center !important;
+        align-items: center !important;
+        .bubble{
+            flex: 0 0 auto;
+            width: 100%;
+            margin-bottom: 4rem !important;
+        }
+        .elmo{
+            justify-content: center !important;
+            align-items: center !important;
+        }
+    }
     @media (max-width: 767px) {
         justify-content: center !important;
         align-items: center !important;
