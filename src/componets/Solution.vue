@@ -14,7 +14,7 @@
                     <div class="row justify-content-center w-100">
                         <div class="col d-flex justify-content-center justify-content-xl-start align-items-start" ref="observeElement">
                             <div class="mt-5" ref="chartRef" id="chart">
-                                <svg id="lineGraph" width="610" height="400">
+                                <svg id="lineGraph" :width="windowSize <= 480 ? '305' : '610'" height="400">
                                     <g id="graphContent"></g>
                                 </svg>
                             </div>
@@ -42,6 +42,7 @@ const { t } = useI18n({ useScope: 'global' })
 let observeElement = ref(null)
 let chartRef = ref(null)
 let observer
+let windowSize = null
 
 onMounted(() => {
     observer = new IntersectionObserver((entries, observer) => {
@@ -60,6 +61,9 @@ onMounted(() => {
     if (observeElement.value) {
         observer.observe(observeElement.value)
     }
+
+    windowSize = window.innerWidth
+    console.log(windowSize)
 })
 
 onUnmounted(() => {
