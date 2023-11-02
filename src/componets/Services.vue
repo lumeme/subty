@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 d-flex justify-content-center align-items-start  px-0 d-lg-none">
+                <div class="col-12 d-flex justify-content-center align-items-start  px-0 d-none">
                     <div class="row justify-content-center w-100">
                         <button class="col-4  d-flex justify-content-center align-items-center see-more" id="seeMoreServices" type="button" @click="hiddenServices">
                             <template v-if="textServices">

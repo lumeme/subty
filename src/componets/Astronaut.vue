@@ -31,7 +31,7 @@
 
 $word-count: 6;
 $angle: calc(360deg / $word-count);
-$radius: 150px;
+$radius: 145px;
 
 .words {
   position: absolute;

@@ -59,7 +59,7 @@ const chartOptions = {
             startAngle: 170,
             endAngle: -190,
             dataLabels: {
-                offset: -50
+                offset: -35
             }
         }
     },
@@ -83,7 +83,7 @@ const chartOptions = {
         options: {
             chart: {
                 type: 'pie',
-                width: 400
+                width: 375
             }
         }
     }],

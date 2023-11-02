@@ -14,7 +14,7 @@
                     <div class="row justify-content-center w-100">
                         <div class="col d-flex justify-content-center justify-content-xl-start align-items-start" ref="observeElement">
                             <div class="mt-5" ref="chartRef" id="chart">
-                                <svg id="lineGraph" :width="windowSize <= 480 ? '305' : '610'" height="400">
+                                <svg id="lineGraph" :width="windowSize >= 480 ? '610' : '305'" height="400">
                                     <g id="graphContent"></g>
                                 </svg>
                             </div>
