@@ -155,7 +155,7 @@
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>
                                 <img src="../../img/about-icons/world.svg" alt="">
-                                {{ $t('message.global') }}</h3>
+                                {{ $t('message.pro') }}</h3>
 
                             </div>
                             <p>{{ $t('message.globalLenguage') }}</p>
@@ -207,7 +207,7 @@
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>
                                 <img src="../../img/about-icons/world.svg" alt="">
-                                {{ $t('message.pro') }}</h3>
+                                {{ $t('message.global') }}</h3>
 
                             </div>
                             <p>{{ $t('message.proLenguage') }}</p>
@@ -243,7 +243,7 @@
                               </div>
                               <div class="col-12 d-flex justify-content-start align-items-center info">
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
-                                <p>{{ $t('message.globalTextTen') }}</p>
+                                <p>{{ $t('message.proTextTen') }}</p>
                               </div>
                             </div>
                           </div>
