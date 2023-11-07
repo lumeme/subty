@@ -84,7 +84,8 @@
                                    <img src="../../img/contact-icons/phone.png" alt="">
                                    <div class="d-flex flex-column justify-content-center align-items-start w-100">
                                        <h3>{{ $t('message.callUs') }}</h3>
-                                       <a href="tel:+541151807976">+54 1151807976</a>
+                                       <a href="https://api.whatsapp.com/send?phone=541151807976&text=Hola!%20Quisiera%20mas%20información%20sobre%20el%20servicio!" v-if="locale == 'es'">+54 1151807976</a>
+                                       <a href="https://api.whatsapp.com/send?phone=541151807976&text=Hello!%20I%20would%20like%20more%20information%20about%20the%20service!" v-else>+54 1151807976</a>
                                    </div>
                                </div>
                            </div>
@@ -116,7 +117,7 @@ import Swal from 'sweetalert2'
 
 const general = useGeneralStore();
 const {} = storeToRefs(general);
-const {url} = general
+const {url, locale} = general
 const { t } = useI18n({ useScope: 'global' })
 
 const contact = ref({
