@@ -270,7 +270,7 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$150<p>USD/{{ $t('message.month') }}</p></h3>
+                              <h3>$250<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
                             <p v-html="$t('message.basicYear')"></p>
                           </div>
@@ -327,7 +327,7 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$250<p>USD/{{ $t('message.month') }}</p></h3>
+                              <h3>$350<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
                             <p v-html="$t('message.expansionYear')"></p>
                           </div>
@@ -396,7 +396,7 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$300<p>USD/{{ $t('message.month') }}</p></h3>
+                              <h3>$400<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
                             <p v-html="$t('message.globalYear')"></p>
                           </div>
@@ -468,7 +468,7 @@
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
-                              <h3>$349<p>USD/{{ $t('message.month') }}</p></h3>
+                              <h3>$449<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
                             <p v-html="$t('message.proYear')"></p>
                           </div>
