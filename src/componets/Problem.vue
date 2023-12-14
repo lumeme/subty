@@ -6,7 +6,7 @@
                     <div class="row justify-content-center w-100">
                         <div class="col d-flex justify-content-center align-items-center">
                             <div class="chart" id="chart">
-                                <apexchart v-if="isVisible" type="pie" width="650" :options="chartOptions" :series="series"></apexchart>
+                                <apexchart v-if="isVisible" type="pie" width="650" :options="chartOptions" :series="locale == 'es' ? series : seriesEn"></apexchart>
                             </div>
                         </div>
                     </div>
@@ -108,18 +108,6 @@ const chartOptions = {
         enabled: false
   }
 }
-
-watch(locale, () => {
-    let newSeries = null
-    if(locale.value == 'en'){
-        newSeries = [80, 20]
-    } else{
-        newSeries = [93, 7]
-    }
-    ApexCharts.exec('problem-chart', 'updateOptions', {
-        series: newSeries
-    }, true, true, true)
-})
 
 onMounted(() => {
     observer = new IntersectionObserver((entries) => {

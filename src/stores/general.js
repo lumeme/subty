@@ -6,12 +6,14 @@ import axios from "axios"
 import { createI18n, useI18n } from "vue-i18n";
 import en from '../languages/en.json'
 import es from '../languages/es.json'
+import { useRouter } from 'vue-router';
 
 export const useGeneralStore = defineStore('general', () => {
-
     const url = import.meta.env.VITE_URL
     const urlPortfolio = '/api/portfolio.php'
     const urlServices = '/api/services.php'
+
+    const router = useRouter()
 
     const {locale} = useI18n({ useScope: 'global' })
 
@@ -42,6 +44,7 @@ export const useGeneralStore = defineStore('general', () => {
 
     const setLang = (lang) => {
         locale.value = lang
+        router.push({ name: 'index', params: { lang: lang } })
         fetchServices(lang)
     }
 

@@ -67,16 +67,28 @@ import Problem from "../componets/Problem.vue"
 import Solution from "../componets/Solution.vue"
 import { useGeneralStore } from "@/stores/general"
 import { storeToRefs } from "pinia"
-import { ref, provide } from 'vue'
+import { ref, provide, onMounted, watch } from 'vue';
 import { createI18n, useI18n } from "vue-i18n"
+import { useRoute } from "vue-router"
 
 import Swal from 'sweetalert2'
 
+const route = useRoute()
+
 const general = useGeneralStore()
-const {} = storeToRefs(general)
+const {locale} = storeToRefs(general)
 const {scroll, url} = general
 
 const { t } = useI18n({ useScope: 'global' })
+
+watch(() => route.params.lang, (newParam, oldParam) => {
+        if (newParam == 'es' || newParam == 'en') {
+            locale.value = newParam
+        }
+    }, { 
+        immediate: true
+    }
+);
 
 const contact = ref({
   name: '',
