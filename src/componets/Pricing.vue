@@ -219,7 +219,7 @@
                             <p>{{ $t('message.proMinuteSubtitle') }}</p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <button @click="persoMessage = 3; updateMessage(); scroll('home')">
+                            <button @click="persoMessage = 4; updateMessage(); scroll('home')">
                               {{ $t('message.chooseButton') }}
                             </button>
                           </div>
