@@ -66,7 +66,7 @@
                 <div class="col-12 col-lg-11 col-xxl-9 d-flex justify-content-end align-items-end">
                     <div class="row justify-content-end w-100">
                         <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center  px-0">
-                            <button type="button" value="Send" @click="sendMail()" class="see-more see-more-fix" id="seeMoreServicies" :disabled="disabled">
+                            <button type="button" value="Send" @click="sendMail(), gtag_report_conversion()" class="see-more see-more-fix" id="seeMoreServicies" :disabled="disabled">
                                 {{ $t('message.sendMessage') }}
                             </button>
                         </div>
@@ -107,6 +107,21 @@ const results = inject('results')
 const tick = ref()
 const count = ref(8548932456);
 let _tick;
+
+//Envia el click a google ads
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11441265234/lnxgCPbr3Y0ZENK0z88q',
+      'event_callback': callback
+  });
+  return false;
+}
+
 
 onMounted(() => {
   _tick = Tick.DOM.create(tick.value, {
