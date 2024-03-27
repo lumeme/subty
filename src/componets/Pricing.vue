@@ -158,7 +158,7 @@
                                 {{ $t('message.pro') }}</h3>
 
                             </div>
-                            <p>{{ $t('message.globalLenguage') }}</p>
+                            <p>{{ $t('message.proLenguage') }}</p>
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
@@ -189,10 +189,10 @@
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextNine') }}</p>
                               </div>
-                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                              <!-- <div class="col-12 d-flex justify-content-start align-items-center info">
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextTen') }}</p>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -210,7 +210,7 @@
                                 {{ $t('message.global') }}</h3>
 
                             </div>
-                            <p>{{ $t('message.proLenguage') }}</p>
+                            <p>{{ $t('message.globalLenguage') }}</p>
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
@@ -388,17 +388,17 @@
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>
-                                <img src="../../img/about-icons/world.svg" alt="">
-                                {{ $t('message.global') }}</h3>
+                                <img src="../../img/about-icons/people.svg" alt="">
+                                {{ $t('message.pro') }}</h3>
 
                             </div>
-                            <p>{{ $t('message.globalLenguage') }}</p>
+                            <p>{{ $t('message.proLenguage') }}</p>
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>$400<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
-                            <p v-html="$t('message.globalYear')"></p>
+                            <p v-html="$t('message.proYear')"></p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 3; updateMessage(); scroll('home')">
@@ -443,10 +443,10 @@
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextNine') }}</p>
                               </div>
-                              <div class="col-12 d-flex justify-content-start align-items-center info">
+                              <!-- <div class="col-12 d-flex justify-content-start align-items-center info">
                                 <img src="../../img/pricing-icons/check.svg" alt="" class="check">
                                 <p>{{ $t('message.globalTextTen') }}</p>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -460,17 +460,17 @@
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>
-                                <img src="../../img/about-icons/people.svg" alt="">
-                                {{ $t('message.pro') }}</h3>
+                                <img src="../../img/about-icons/world.svg" alt="">
+                                {{ $t('message.global') }}</h3>
 
                             </div>
-                            <p>{{ $t('message.proLenguage') }}</p>
+                            <p>{{ $t('message.globalLenguage') }}</p>
                           </div>
                           <div class="col-12 d-flex flex-column justify-content-center align-items-start info">
                             <div class="d-flex justify-content-start align-items-center w-100">
                               <h3>$449<p>USD/{{ $t('message.month') }}</p></h3>
                             </div>
-                            <p v-html="$t('message.proYear')"></p>
+                            <p v-html="$t('message.globalYear')"></p>
                           </div>
                           <div class="col-12 d-flex justify-content-center align-items-center px-0">
                             <button @click="persoMessage = 3; updateMessage(); scroll('home')">

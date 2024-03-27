@@ -27,9 +27,9 @@
                                     <li class="nav-item col col-perso d-flex justify-content-center align-items-center">
                                         <button class="nav-link" aria-current="page" @click="scroll('about')">{{ $t('message.about') }}</button>
                                     </li>
-                                    <li class="nav-item col col-perso d-flex justify-content-center align-items-center">
+                                    <!-- <li class="nav-item col col-perso d-flex justify-content-center align-items-center">
                                         <button class="nav-link" @click="scroll('team')">{{ $t('message.team') }}</button>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item col  d-flex justify-content-center align-items-center">
                                         <button class="nav-link" @click="scroll('contact')">{{ $t('message.contact') }}</button>
                                     </li>
