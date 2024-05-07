@@ -1,8 +1,6 @@
 <?php
-
-
 include 'cors.php';
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -33,11 +31,8 @@ if (isset($_POST)) {
                 $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
                 $mail->Port = 587; //TCP port to connect to; use 587 if you have set `SMTPSecure =PHPMailer::ENCRYPTION_STARTTLS`
                 //Set sender
-                $mail->setFrom('info@subty.studio', 'Subty Studio');
+                $mail->setFrom('melajannielli@gmail.com', 'Melanie Jannielli');
                 //Add a recipients
-                $mail->addAddress('info@subty.studio', 'Subty Studio');
-                $mail->addAddress('iglesiaslucia008@gmail.com', 'Lucia Iglesias');
-                // $mail->addAddress('joacolinares2003@gmail.com', 'Joaquin Linares');
                 $mail->addReplyTo($data->email, $data->name);
                 //End recipients
                 //Content

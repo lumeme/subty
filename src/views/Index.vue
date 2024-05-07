@@ -30,7 +30,7 @@
             <!--- CONTACT --->
             <ContactEnd id="contact"/>
             <!--- TEAM --->
-            <!-- <TeamMobile/> -->
+            <TeamMobile/> 
         </div>
 
       <!--- <div class="row justify-content-center background-3">

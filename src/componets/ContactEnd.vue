@@ -157,6 +157,7 @@ function sendMail() {
    const validateEmailConst = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    const validatePhoneConst = /^\+?[\d\s-]+$/;
    // Validación para verificar si alguno de los campos está vacío
+   console.log(name, email, phone, message, validateEmailConst, validatePhoneConst)
    const validateName = () => {
        if (!name ) {
            const Toast = Swal.mixin({
@@ -300,11 +301,12 @@ function sendMail() {
        .then(response => response.text())
        .then(data => {
            let dataParse = JSON.parse(data)
-           //console.log(JSON.parse(data));
-           //console.log(dataParse.inf.result)
+           console.log(JSON.parse(data));
+           console.log(dataParse.inf.result)
            // Aquí puedes agregar la condición para verificar si la respuesta es correcta o no
            if (dataParse.inf.result == true) {
-               //console.log('holi')
+               console.log('holi')
+               console.log(dataParse)
                const Toast = Swal.mixin({
                    toast: true,
                    position: 'top-end',

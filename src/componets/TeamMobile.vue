@@ -4,7 +4,7 @@
             <div class="col-12 d-flex flex-column justify-content-center align-items-center px-0 py-2">
                 <h2> {{ $t('message.team') }}</h2>
             </div>
-            <div class="col-12 col-lg-4 col-xxl-4 d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
+            <div class="col-12 col-md-3 col-xl d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">
@@ -26,14 +26,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 col-xxl-4 d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
+            <div class="col-12 col-md-3 col-xl d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">
                             <div class="col-12 d-flex flex-column justify-content-center align-items-center px-0">
                                 <img src="../../img/team-icons/lumeme.jpeg.jpg" alt="" class="img-fix">
                                 <p class="p-creator">{{ $t('message.ceoTwo') }}</p>
-                                <h2 class="name-creator">Lucia Iglesias</h2>
+                                <h2 class="name-creator">Lucia <br class="d-xxl-none"> Iglesias</h2>
                             </div>
                             <div class="col-12 d-flex justify-content-center align-items-center">
                                 <div class="row justify-content-center">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 col-xxl-4 d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
+            <div class="col-12 col-md-3 col-xl d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">
@@ -70,14 +70,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 col-xxl-4 d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
+            <div class="col-12 col-md-3 col-xl d-flex flex-column justify-content-center align-items-center px-1 px-lg-4 px-xxl-5">
                 <div class="row justify-content-center w-100">
                     <div class="col-12 d-flex justify-content-center align-items-center px-0 fix">
                         <div class="row justify-content-center w-100">
                             <div class="col-12 d-flex flex-column justify-content-center align-items-center px-0">
                                 <img src="../../img/team-icons/julio.png" alt="" class="img-fix">
                                 <p class="p-creator">{{ $t('message.ceoFour') }}</p>
-                                <h2 class="name-creator">Julio Demartini</h2>
+                                <h2 class="name-creator">Julio <br class="d-xxl-none"> Demartini</h2>
                             </div>
                             <div class="col-12 d-flex justify-content-center align-items-center">
                                 <div class="row justify-content-center">
